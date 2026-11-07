@@ -121,7 +121,7 @@ content:
         type: string
         required: true
         pattern: "^[a-z0-9-]+$"
-        description: Ejemplo: walter-silva-godoy. No modificar si ya está publicado.
+        description: "Ejemplo: walter-silva-godoy. No modificar si ya está publicado."
       - name: image
         label: Retrato (opcional)
         type: image
