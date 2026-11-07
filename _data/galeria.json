@@ -1,14 +1,14 @@
 [
   {
     "id": "galeria-nacional",
-    "title": "NACIONAL",
-    "description": "Rubén Sosa, capitán de Nacional, frente a Rubén Paz, capitán de Frontera, en el Estadio Atilio Paiva Olivera.",
+    "title": "FRONTERA VS NACIONAL",
+    "description": "Rubén Sosa frente a Rubén Paz, en el Estadio Atilio Paiva Olivera.",
     "image": "/assets/img/galeria-nacional.webp"
   },
   {
     "id": "galeria-penarol",
-    "title": "PEÑAROL",
-    "description": "Rubén Paz en Frontera frente a Pablo Bengoechea en Peñarol, en el Estadio Atilio Paiva Olivera.",
+    "title": "FRONTERA VS PEÑAROL",
+    "description": "Rubén Paz frente a Pablo Bengoechea, en el Estadio Atilio Paiva Olivera.",
     "image": "/assets/img/galeria-penarol.webp"
   },
   {
@@ -32,7 +32,7 @@
   {
     "id": "portada-2024",
     "title": "VUELTA 2024",
-    "description": "Fotografía de Joaquín Duarte. El regreso de Frontera y su gente.",
+    "description": "El regreso de Frontera y su gente. Fotografía de Joaquín Duarte. ",
     "image": "/assets/img/portada-2024.webp"
   },
   {
@@ -50,25 +50,25 @@
   {
     "id": "ascenso-gente",
     "title": "LA HINCHADA",
-    "description": "Una imagen histórica de la pasión por Frontera.",
+    "description": "Una imagen histórica en el parque viera, con la gente de Frontera.",
     "image": "/assets/img/ascenso-gente.webp"
   },
   {
     "id": "ascenso-caravana",
     "title": "LA CARAVANA",
-    "description": "El regreso de los campeones y la fiesta de Rivera.",
+    "description": "La caravana el día del ascenso.",
     "image": "/assets/img/ascenso-caravana.webp"
   },
   {
     "id": "hinchada",
     "title": "LA CUARÓ",
-    "description": "Las tribunas y las banderas del rojo.",
+    "description": "LBDC y vecinos de Rivera, alentando el día de la vuelta en 2024.",
     "image": "/assets/img/hinchada.webp"
   },
   {
     "id": "jose-sandin",
     "title": "JOSÉ SANDÍN ALVEZ",
-    "description": "Hincha y dirigente de Frontera, alentando en la tribuna.",
+    "description": "Hincha y dirigente de Frontera, alentando en la tribuna  el día del ascenso.",
     "image": "/assets/img/jose-sandin.webp"
   }
 ]
