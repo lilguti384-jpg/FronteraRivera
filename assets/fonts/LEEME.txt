@@ -1,1 +1,0 @@
-Albertus Nova: no se incluyen archivos de fuentes en el paquete. Para que se muestre a todos los visitantes se necesita una licencia de uso web y un archivo servido con @font-face. La alternativa actual es Cinzel. No publiques un archivo de fuente sin permiso.
