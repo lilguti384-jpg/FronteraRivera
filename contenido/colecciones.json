@@ -1,0 +1,148 @@
+{
+  "gallery": [
+    {
+      "id": "galeria-nacional",
+      "title": "NACIONAL",
+      "description": "Rubén Sosa, capitán de Nacional, frente a Rubén Paz, capitán de Frontera, en el Estadio Atilio Paiva Olivera.",
+      "image": "assets/img/galeria-nacional.webp"
+    },
+    {
+      "id": "galeria-penarol",
+      "title": "PEÑAROL",
+      "description": "Rubén Paz en Frontera frente a Pablo Bengoechea en Peñarol, en el Estadio Atilio Paiva Olivera.",
+      "image": "assets/img/galeria-penarol.webp"
+    },
+    {
+      "id": "galeria-la-loca",
+      "title": "LA LOCA",
+      "description": "La hinchada de Frontera de la vieja escuela.",
+      "image": "assets/img/galeria-la-loca.webp"
+    },
+    {
+      "id": "galeria-jugadores",
+      "title": "JUGADORES",
+      "description": "Frontera Rivera festejando un gol contra Peñarol.",
+      "image": "assets/img/galeria-jugadores.webp"
+    },
+    {
+      "id": "galeria-ascenso-festejos",
+      "title": "ASCENSO FESTEJOS",
+      "description": "Los jugadores celebrando el ascenso en el Parque Viera.",
+      "image": "assets/img/galeria-ascenso-festejos.webp"
+    },
+    {
+      "id": "portada-2024",
+      "title": "VUELTA 2024",
+      "description": "Fotografía de Joaquín Duarte. El regreso de Frontera y su gente.",
+      "image": "assets/img/portada-2024.webp"
+    },
+    {
+      "id": "ascenso-diario",
+      "title": "EL ASCENSO",
+      "description": "Un recorte de prensa que quedó en la memoria del club.",
+      "image": "assets/img/ascenso-diario.webp"
+    },
+    {
+      "id": "ascenso-plantel",
+      "title": "PLANTEL",
+      "description": "Una fotografía del equipo de Frontera.",
+      "image": "assets/img/ascenso-plantel.webp"
+    },
+    {
+      "id": "ascenso-gente",
+      "title": "LA HINCHADA",
+      "description": "Una imagen histórica de la pasión por Frontera.",
+      "image": "assets/img/ascenso-gente.webp"
+    },
+    {
+      "id": "ascenso-caravana",
+      "title": "LA CARAVANA",
+      "description": "El regreso de los campeones y la fiesta de Rivera.",
+      "image": "assets/img/ascenso-caravana.webp"
+    },
+    {
+      "id": "hinchada",
+      "title": "LA CUARÓ",
+      "description": "Las tribunas y las banderas del rojo.",
+      "image": "assets/img/hinchada.webp"
+    },
+    {
+      "id": "jose-sandin",
+      "title": "JOSÉ SANDÍN ALVEZ",
+      "description": "Hincha y dirigente de Frontera, alentando en la tribuna.",
+      "image": "assets/img/jose-sandin.webp"
+    }
+  ],
+  "songs": [
+    {
+      "title": "Dale rojo",
+      "artist": "Maciegas",
+      "audio": "assets/audio/dale-rojo.mp3",
+      "description": null
+    },
+    {
+      "title": "Hino prainshada lúmpe dus diablo rojo da Cuaró",
+      "artist": "Chito de Mello",
+      "audio": "assets/audio/hino-prainshada.mp3",
+      "description": null
+    },
+    {
+      "title": "De la Cuaró y del Frontera",
+      "artist": "Maciegas",
+      "audio": "assets/audio/de-la-cuaro.mp3",
+      "description": null
+    },
+    {
+      "title": "Candombe de Cuaró",
+      "artist": "Anderson Román",
+      "audio": "assets/audio/candombe-cuaro.mp3",
+      "description": null
+    }
+  ],
+  "homages": [
+    {
+      "name": "Walter Silva Godoy",
+      "slug": "walter-silva-godoy",
+      "image": "assets/img/walter-silva.webp",
+      "biography": null
+    },
+    {
+      "name": "Nenito Araujo",
+      "slug": "nenito-araujo",
+      "image": null,
+      "biography": null
+    },
+    {
+      "name": "El Groncho",
+      "slug": "el-groncho",
+      "image": null,
+      "biography": null
+    },
+    {
+      "name": "Chito de Mello",
+      "slug": "chito-de-mello",
+      "image": null,
+      "biography": null
+    },
+    {
+      "name": "José Sandín Alvez",
+      "slug": "jose-sandin",
+      "image": "assets/img/jose-sandin.webp",
+      "biography": null
+    }
+  ],
+  "articles": [
+    {
+      "title": "La Cuaró.",
+      "slug": "articulos/la-cuaro"
+    },
+    {
+      "title": "1998: la noche en que Rivera no durmió",
+      "slug": "articulos/ascenso-1998"
+    },
+    {
+      "title": "El santo de Rivera",
+      "slug": "articulos/el-santo-de-rivera"
+    }
+  ]
+}
