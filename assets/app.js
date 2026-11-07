@@ -37,19 +37,37 @@
   }));
   by('#closeLightbox')?.addEventListener('click',()=>dialog?.close());
   dialog?.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
-  // Contact form requires live Netlify function; never fake successful delivery.
+  // Formulario Frontera Rivera conectado a Formspree; GitHub Pages no ejecuta funciones Netlify.
   all('[data-contact-form]').forEach(form=>form.addEventListener('submit',async ev=>{
-    ev.preventDefault();if(!form.reportValidity())return;
-    const status=form.querySelector('.form-status'), button=form.querySelector('[type=submit]');
-    const data=Object.fromEntries(new FormData(form));
-    if(data.website){status.textContent='Gracias por escribirnos.';return}
-    button.disabled=true;button.textContent='Enviando…';status.textContent='Intentando enviar el mensaje…';
+    ev.preventDefault();
+    if(!form.reportValidity())return;
+    const status=form.querySelector('.form-status'),button=form.querySelector('[type=submit]');
+    const payload=new FormData(form);
+    // Campo trampa contra bots; las personas no lo ven.
+    if(payload.get('_gotcha'))return;
+    button.disabled=true;
+    button.textContent='Enviando…';
+    status.textContent='Enviando tu mensaje…';
     try{
-      const res=await fetch('/.netlify/functions/contacto',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+      const res=await fetch(form.action,{
+        method:'POST',
+        body:payload,
+        headers:{Accept:'application/json'}
+      });
       const result=await res.json().catch(()=>({}));
-      if(!res.ok)throw Error(result.error||'Todavía no está configurado el envío de correos.');
-      status.textContent='¡Mensaje enviado! Gracias por escribirnos.';form.reset();
-    }catch(err){status.textContent='No pudimos enviar el mensaje: '+(location.protocol==='file:'?'publicá la web y configurá el correo primero.':err.message)+' También podés escribir a clubfronterarivera@gmail.com.'}
-    finally{button.disabled=false;button.textContent='Enviar mensaje ↗'}
+      if(!res.ok){
+        if(res.status===429)throw Error('Recibimos muchos mensajes en poco tiempo. Esperá unos minutos y volvé a intentar.');
+        const firstError=Array.isArray(result.errors)?result.errors[0]?.message:null;
+        throw Error(firstError||result.error||'No se pudo enviar el mensaje. Intentá nuevamente.');
+      }
+      status.textContent='¡Mensaje enviado! Gracias por escribirnos.';
+      form.reset();
+    }catch(err){
+      status.textContent='No pudimos enviar tu mensaje: '+(err?.message||'error de conexión.')+' También podés escribirnos a clubfronterarivera@gmail.com.';
+    }finally{
+      button.disabled=false;
+      button.textContent='Enviar mensaje ↗';
+    }
   }));
+
 })();
