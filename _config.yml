@@ -1,0 +1,13 @@
+# GitHub Pages usa Jekyll para generar las páginas de los artículos nuevos.
+title: Frontera Rivera
+url: "https://fronterarivera.com"
+baseurl: ""
+lang: es-UY
+permalink: /articulos/:title/
+markdown: kramdown
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: noticia
