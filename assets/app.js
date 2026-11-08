@@ -70,4 +70,13 @@
     }
   }));
 
+
+  // Vista ampliada de la camiseta: funciona con toque y teclado.
+  const camisetaDialog=by('[data-camiseta-dialog]');
+  by('[data-camiseta-view]')?.addEventListener('click',()=>{
+    if(camisetaDialog?.showModal)camisetaDialog.showModal();
+    else camisetaDialog?.setAttribute('open','');
+  });
+  by('[data-camiseta-close]')?.addEventListener('click',()=>camisetaDialog?.close());
+  camisetaDialog?.addEventListener('click',ev=>{if(ev.target===camisetaDialog)camisetaDialog.close()});
 })();

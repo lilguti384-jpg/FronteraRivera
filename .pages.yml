@@ -531,6 +531,34 @@ content:
         type: text
 
 
+  - name: camiseta_2027
+    label: "Camiseta alternativa 2027"
+    type: file
+    path: _data/camiseta_2027.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: titulo
+        label: "Título"
+        type: string
+        required: true
+      - name: subtitulo
+        label: "Subtítulo"
+        type: string
+      - name: descripcion
+        label: "Texto de presentación"
+        type: text
+        required: true
+      - name: imagen
+        label: "Imagen ALTERNATIVA27"
+        type: image
+        options:
+          media: fotos
+      - name: aviso
+        label: "Aviso del prototipo"
+        type: text
+
 settings:
   commit:
     templates:
