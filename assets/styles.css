@@ -101,7 +101,7 @@ body.dark .kit2027-zoom{background:#fff8ea;color:#261711}
 @media(max-width:760px){
 .kit2027-section{padding:36px 0 54px}
 .kit2027-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "visual" "body";gap:24px}
-.kit2027-heading h2{font-size:clamp(2.05rem,8.4vw,3.75rem)}
+.kit2027-heading h2{font-size:clamp(2.05rem,8.4vw,3.75rem);margin-bottom:5px}.kit2027-heading .kit2027-subtitle{margin-top:0;line-height:1.12}
 .kit2027-overline{font-size:.65rem;margin-bottom:15px}
 .kit2027-art{width:calc(100% - 18px);margin-right:18px;border:0;box-shadow:12px 12px 0 var(--yellow)}
 .kit2027-art:hover,.kit2027-art:focus-within{transform:rotate(0) translateY(-3px);box-shadow:12px 14px 0 var(--yellow)}
