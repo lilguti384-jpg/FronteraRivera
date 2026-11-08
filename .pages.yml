@@ -264,7 +264,7 @@ content:
         type: string
       - name: titulo_musica
         label: "titulo musica"
-        type: string
+        type: text
       - name: bajada_musica
         label: "bajada musica"
         type: string
