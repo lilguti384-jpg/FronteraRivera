@@ -1,23 +1,38 @@
 [
   {
+    "anio": "1928/29",
+    "titulo": "¿ Un Frontera verde?",
+    "descripcion": "Un Frontera con otros colores comienza a verse en el Barrio Rivera Chico, su historia se ha perdido en las brumas del tiempo, pero deja el testimonio de una barriada que quería estar y que alzaría definitivamente en el Frontera \"rojo\" en el escenario del fútbol Uruguayo."
+  },
+  {
     "anio": "1932",
     "titulo": "Nace el Club Social Rivera Chico",
-    "descripcion": "Uno de los antecedentes barriales de esta historia colectiva."
+    "descripcion": "Uno de los antecedentes barriales de esta historia colectiva.\n1 de octubre de 1932."
+  },
+  {
+    "anio": "1944",
+    "titulo": "Fundación C.A Fronteras",
+    "descripcion": "Nace en el barrio el Club Atlético Fronteras (llamado Platense hasta 1946).\nEl Club Atlético Platense, había adoptado el nombre de la institución calamar argentina, ya que esta fue la única que envió un juego de camisetas. En su segundo año en la Divisional Intermedia, Platense conquistó el ascenso a la Primera División (de la Liga de Rivera) jugando con camiseta roja con cuello y puños amarillos y pantalón blanco. "
   },
   {
     "anio": "1973",
-    "titulo": "FuFrontera Rivera Chico",
+    "titulo": "Frontera Rivera Chico",
     "descripcion": "La unión del C.S. Rivera Chico y el Club Atlético Frontera que consolidó una identidad futbolera."
   },
   {
     "anio": "1995",
     "titulo": "Presencia nacional",
-    "descripcion": "La final de la Copa Nacional de Clubes y la Liguilla Pre-Libertadores."
+    "descripcion": "Frontera Rivera Chico fue finalista de la Copa Nacional de Clubes perdiendo el trofeo frente al Club Porongos de Flores. Igualmente esto le permitió clasificar a la Liguilla Pre-Libertadores de 1995 participando por primera vez del fútbol AUF."
   },
   {
     "anio": "1998",
     "titulo": "El gran ascenso",
-    "descripcion": "8 de noviembre: Frontera en una tarde vs Deportivo Maldonado, alcanza la Primera División profesional."
+    "descripcion": "8 de noviembre: Frontera en una tarde vs Deportivo Maldonado, alcanza la Primera División profesional convirtiéndose así en el primer club del interior en ascender a Primera por méritos deportivos."
+  },
+  {
+    "anio": "1997",
+    "titulo": "Acta fundacional Frontera Rivera Fútbol Club",
+    "descripcion": "27 noviembre 1997."
   },
   {
     "anio": "2024",
