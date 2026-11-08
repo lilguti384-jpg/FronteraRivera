@@ -2,31 +2,23 @@
   {
     "name": "Walter Silva Godoy",
     "slug": "walter-silva-godoy",
-    "image": "/assets/img/walter-silva.webp",
-    "biography": ""
+    "image": "/assets/img/walter-silva.webp"
   },
   {
     "name": "Nenito Araujo",
-    "slug": "nenito-araujo",
-    "image": "",
-    "biography": ""
+    "slug": "nenito-araujo"
   },
   {
-    "name": "El Groncho",
-    "slug": "el-groncho",
-    "image": "",
-    "biography": ""
+    "name": "Enrique “Groncho” Souza",
+    "slug": "el-groncho"
   },
   {
     "name": "Chito de Mello",
-    "slug": "chito-de-mello",
-    "image": "",
-    "biography": ""
+    "slug": "chito-de-mello"
   },
   {
     "name": "José Sandín Alvez",
     "slug": "jose-sandin",
-    "image": "/assets/img/jose-sandin.webp",
-    "biography": ""
+    "image": "/assets/img/jose-sandin.webp"
   }
 ]
