@@ -47,6 +47,12 @@ content:
       - name: credito
         label: Crédito de la fotografía
         type: string
+      - name: kicker
+        label: "Texto pequeño arriba del título"
+        type: string
+      - name: frase_foto
+        label: "Frase junto a la fotografía"
+        type: string
 
   - name: galeria
     label: Galería de fotos
@@ -165,6 +171,365 @@ content:
         options:
           format: markdown
           media: fotos
+
+  - name: frases
+    label: "Frase del Padre Silva"
+    type: file
+    path: _data/frases.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: etiqueta
+        label: "Etiqueta pequeña"
+        type: string
+      - name: cita_padre_silva
+        label: "Cita íntegra del Padre Silva"
+        type: text
+      - name: autor_padre_silva
+        label: "Autor de la cita"
+        type: string
+      - name: imagen
+        label: "Foto de la hinchada junto a la cita"
+        type: image
+        options:
+          media: fotos
+      - name: pie_imagen
+        label: "Pie de foto"
+        type: string
+
+  - name: bloques_inicio
+    label: "Más textos del Inicio"
+    type: file
+    path: _data/bloques_inicio.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: etiqueta_identidad
+        label: "etiqueta identidad"
+        type: string
+      - name: titulo_identidad
+        label: "titulo identidad"
+        type: string
+      - name: identidad_parrafo_1
+        label: "identidad parrafo 1"
+        type: text
+      - name: identidad_parrafo_2
+        label: "identidad parrafo 2"
+        type: text
+      - name: etiqueta_descubri
+        label: "etiqueta descubri"
+        type: string
+      - name: titulo_descubri
+        label: "titulo descubri"
+        type: string
+      - name: bajada_descubri
+        label: "bajada descubri"
+        type: string
+      - name: fecha_ascenso
+        label: "fecha ascenso"
+        type: string
+      - name: titulo_ascenso
+        label: "titulo ascenso"
+        type: string
+      - name: bajada_ascenso
+        label: "bajada ascenso"
+        type: text
+      - name: imagen_ascenso
+        label: "imagen ascenso"
+        type: image
+        options:
+          media: fotos
+      - name: etiqueta_simbolos
+        label: "etiqueta simbolos"
+        type: string
+      - name: titulo_simbolos
+        label: "titulo simbolos"
+        type: string
+      - name: bajada_simbolos
+        label: "bajada simbolos"
+        type: string
+      - name: etiqueta_fotos
+        label: "etiqueta fotos"
+        type: string
+      - name: titulo_fotos
+        label: "titulo fotos"
+        type: string
+      - name: bajada_fotos
+        label: "bajada fotos"
+        type: string
+      - name: etiqueta_musica
+        label: "etiqueta musica"
+        type: string
+      - name: titulo_musica
+        label: "titulo musica"
+        type: string
+      - name: bajada_musica
+        label: "bajada musica"
+        type: string
+
+  - name: portada_galeria
+    label: "Fotos destacadas del Inicio"
+    type: file
+    path: _data/portada_galeria.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: titulo
+        label: "Pie de foto"
+        type: string
+      - name: imagen
+        label: "Fotografía"
+        type: image
+        options:
+          media: fotos
+      - name: alt
+        label: "Descripción de la imagen"
+        type: text
+
+  - name: historia_texto
+    label: "Relato completo de Historia"
+    type: file
+    path: _data/historia_texto.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: subtitulo
+        label: "Etiqueta"
+        type: string
+      - name: titulo
+        label: "Título del relato"
+        type: string
+      - name: cuerpo
+        label: "Texto completo"
+        type: rich-text
+        options:
+          format: markdown
+      - name: imagen
+        label: "Imagen de Historia"
+        type: image
+        options:
+          media: fotos
+      - name: imagen_credito
+        label: "Pie de imagen"
+        type: string
+
+  - name: cronologia
+    label: "Cronología histórica"
+    type: file
+    path: _data/cronologia.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: anio
+        label: "Año"
+        type: string
+      - name: titulo
+        label: "Título del acontecimiento"
+        type: string
+      - name: descripcion
+        label: "Descripción histórica"
+        type: text
+
+  - name: videos
+    label: "Frontera TV — videos"
+    type: file
+    path: _data/videos.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: id
+        label: "ID de YouTube (11 caracteres)"
+        type: string
+        required: true
+        pattern: "^[A-Za-z0-9_-]{11}$"
+      - name: inicio
+        label: "Empezar desde el segundo (0 si no)"
+        type: number
+      - name: etiqueta
+        label: "Categoría del video"
+        type: string
+      - name: titulo
+        label: "Título"
+        type: string
+      - name: descripcion
+        label: "Descripción"
+        type: text
+
+  - name: textos_paginas
+    label: "Títulos y textos de cada página"
+    type: file
+    path: _data/textos_paginas.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: historia
+        label: "Historia"
+        type: object
+        fields:
+          - name: etiqueta
+            label: "Etiqueta"
+            type: string
+          - name: titulo
+            label: "Título principal"
+            type: string
+          - name: descripcion
+            label: "Subtítulo"
+            type: text
+          - name: cronologia_titulo
+            label: "Título cronología"
+            type: string
+          - name: cronologia_descripcion
+            label: "Descripción cronología"
+            type: text
+      - name: galeria
+        label: "Galería"
+        type: object
+        fields:
+          - name: etiqueta
+            label: "Etiqueta"
+            type: string
+          - name: titulo
+            label: "Título principal"
+            type: string
+          - name: descripcion
+            label: "Subtítulo"
+            type: text
+          - name: subtitulo
+            label: "Título del archivo"
+            type: string
+          - name: bajada
+            label: "Bajada del archivo"
+            type: text
+      - name: musica
+        label: "Música"
+        type: object
+        fields:
+          - name: etiqueta
+            label: "Etiqueta"
+            type: string
+          - name: titulo
+            label: "Título principal"
+            type: string
+          - name: descripcion
+            label: "Subtítulo"
+            type: text
+          - name: bajada
+            label: "Bajada del catálogo"
+            type: text
+      - name: homenajes
+        label: "Homenajes"
+        type: object
+        fields:
+          - name: etiqueta
+            label: "Etiqueta"
+            type: string
+          - name: titulo
+            label: "Título principal"
+            type: string
+          - name: descripcion
+            label: "Descripción"
+            type: text
+          - name: subtitulo
+            label: "Título de las tarjetas"
+            type: string
+          - name: bajada
+            label: "Bajada de las tarjetas"
+            type: text
+      - name: tv
+        label: "Frontera TV"
+        type: object
+        fields:
+          - name: etiqueta
+            label: "Etiqueta"
+            type: string
+          - name: titulo
+            label: "Título principal"
+            type: string
+          - name: descripcion
+            label: "Descripción"
+            type: text
+      - name: contacto
+        label: "Contacto"
+        type: object
+        fields:
+          - name: etiqueta
+            label: "Etiqueta"
+            type: string
+          - name: titulo
+            label: "Título principal"
+            type: string
+          - name: descripcion
+            label: "Descripción"
+            type: text
+          - name: formulario_titulo
+            label: "Título del formulario"
+            type: string
+          - name: lateral_titulo
+            label: "Título de la columna amarilla"
+            type: string
+          - name: lateral_texto
+            label: "Texto de la columna amarilla"
+            type: text
+
+  - name: sitio
+    label: "Redes, escudo, pie y SEO"
+    type: file
+    path: _data/sitio.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: logo
+        label: "Escudo del encabezado"
+        type: image
+        options:
+          media: fotos
+      - name: mascota
+        label: "Imagen del Diablito"
+        type: image
+        options:
+          media: fotos
+      - name: email
+        label: "Correo público del club"
+        type: string
+      - name: instagram
+        label: "Enlace Instagram"
+        type: string
+      - name: facebook
+        label: "Enlace Facebook"
+        type: string
+      - name: youtube
+        label: "Enlace YouTube"
+        type: string
+      - name: pie_descripcion
+        label: "Texto junto al escudo del pie"
+        type: text
+      - name: pie_pregunta
+        label: "Pregunta del pie"
+        type: string
+      - name: pie_texto
+        label: "Invitación del pie"
+        type: text
+      - name: pie_firma
+        label: "Firma del creador"
+        type: string
+      - name: seo_titulo
+        label: "Título de la portada para Google"
+        type: string
+      - name: seo_descripcion
+        label: "Descripción de la portada para Google"
+        type: text
+
 
 settings:
   commit:
