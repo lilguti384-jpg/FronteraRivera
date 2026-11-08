@@ -70,5 +70,11 @@
     "title": "JOSÉ SANDÍN ALVEZ",
     "description": "Hincha y dirigente de Frontera, alentando en la tribuna  el día del ascenso.",
     "image": "/assets/img/jose-sandin.webp"
+  },
+  {
+    "id": "LBDC",
+    "title": "Los borrachos de Cuaró",
+    "description": "La hinchada previando en la plaza del barrio.",
+    "image": "/assets/img/79977047216994949544763154784120054746992723n.jpg"
   }
 ]
