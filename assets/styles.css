@@ -110,3 +110,10 @@ body.dark .kit2027-zoom{background:#fff8ea;color:#261711}
 .kit2027-note{font-size:.78rem}
 }
 @media(prefers-reduced-motion:reduce){.kit2027-art,.kit2027-image-button img,.hero-kit-jump{transition:none!important;animation:none!important}.kit2027-art:hover,.kit2027-art:focus-within{transform:none}}
+
+
+/* Conservar el ligero giro y el hover también al terminar la animación de entrada. */
+.motion .kit2027-art.shown{transform:rotate(-1deg)}
+.motion .kit2027-art.shown:hover,.motion .kit2027-art.shown:focus-within{transform:rotate(0) translateY(-7px)}
+@media(max-width:760px){.motion .kit2027-art.shown:hover,.motion .kit2027-art.shown:focus-within{transform:rotate(0) translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){.motion .kit2027-art.shown,.motion .kit2027-art.shown:hover,.motion .kit2027-art.shown:focus-within{transform:none!important}}
