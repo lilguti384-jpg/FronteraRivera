@@ -1,0 +1,25 @@
+{
+  "titulo": "PRÓXIMO PARTIDO",
+  "competencia": "",
+  "rival": "Rival por confirmar",
+  "escudo_rival": "",
+  "fecha": "",
+  "hora": "",
+  "estadio": "",
+  "lugar": "",
+  "nota": "Los detalles del próximo encuentro se publicarán cuando estén confirmados.",
+  "resultado": {
+    "rival": "",
+    "fecha": "",
+    "marcador": "",
+    "resumen": ""
+  },
+  "entradas": {
+    "estado": "Venta de entradas por confirmar",
+    "detalle": "Cuando haya información oficial de entradas, la vas a encontrar aquí.",
+    "url": ""
+  },
+  "fixture": [],
+  "tabla": [],
+  "estadisticas": []
+}

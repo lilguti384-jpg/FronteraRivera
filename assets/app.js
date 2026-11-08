@@ -79,4 +79,33 @@
   });
   by('[data-camiseta-close]')?.addEventListener('click',()=>camisetaDialog?.close());
   camisetaDialog?.addEventListener('click',ev=>{if(ev.target===camisetaDialog)camisetaDialog.close()});
+
+  // Centro de partido: pestañas accesibles con toque y flechas de teclado.
+  const matchTabs=all('[data-match-tab]');
+  const matchPanels=all('[data-match-panel]');
+  if(matchTabs.length && matchPanels.length){
+    const activateMatchTab=(button,focus=false)=>{
+      const key=button.dataset.matchTab;
+      matchTabs.forEach(tab=>{
+        const selected=tab===button;
+        tab.setAttribute('aria-selected',selected?'true':'false');
+        tab.tabIndex=selected?0:-1;
+      });
+      matchPanels.forEach(panel=>{panel.hidden=panel.dataset.matchPanel!==key;});
+      if(focus)button.focus();
+    };
+    matchTabs.forEach((tab,index)=>{
+      tab.addEventListener('click',()=>activateMatchTab(tab));
+      tab.addEventListener('keydown',ev=>{
+        let idx=index;
+        if(ev.key==='ArrowRight')idx=(index+1)%matchTabs.length;
+        else if(ev.key==='ArrowLeft')idx=(index+matchTabs.length-1)%matchTabs.length;
+        else if(ev.key==='Home')idx=0;
+        else if(ev.key==='End')idx=matchTabs.length-1;
+        else return;
+        ev.preventDefault();
+        activateMatchTab(matchTabs[idx],true);
+      });
+    });
+  }
 })();

@@ -559,6 +559,128 @@ content:
         label: "Aviso del prototipo"
         type: text
 
+  - name: partido
+    label: "Próximo partido y centro de partido"
+    type: file
+    path: _data/partido.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: titulo
+        label: "Título de la sección (ej. PRÓXIMO PARTIDO)"
+        type: string
+      - name: competencia
+        label: "Competencia / categoría"
+        type: string
+      - name: rival
+        label: "Nombre del rival"
+        type: string
+      - name: escudo_rival
+        label: "Escudo del rival (dejar vacío para gris)"
+        type: image
+        options:
+          media: fotos
+      - name: fecha
+        label: "Fecha del partido (texto)"
+        type: string
+      - name: hora
+        label: "Hora del partido (texto)"
+        type: string
+      - name: estadio
+        label: "Estadio"
+        type: string
+      - name: lugar
+        label: "Ciudad / lugar"
+        type: string
+      - name: nota
+        label: "Aviso debajo de la ficha"
+        type: text
+      - name: resultado
+        label: "Último resultado"
+        type: object
+        fields:
+          - name: rival
+            label: "Rival"
+            type: string
+          - name: fecha
+            label: "Fecha"
+            type: string
+          - name: marcador
+            label: "Marcador (ej. 2 - 1)"
+            type: string
+          - name: resumen
+            label: "Crónica breve"
+            type: text
+      - name: entradas
+        label: "Venta de entradas"
+        type: object
+        fields:
+          - name: estado
+            label: "Título o estado"
+            type: string
+          - name: detalle
+            label: "Detalles de la venta"
+            type: text
+          - name: url
+            label: "Enlace oficial de venta de entradas (opcional)"
+            type: string
+      - name: fixture
+        label: "Próximos encuentros / fixture"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{rival}"
+        fields:
+          - name: rival
+            label: "Rival"
+            type: string
+          - name: fecha
+            label: "Fecha"
+            type: string
+          - name: hora
+            label: "Hora"
+            type: string
+          - name: estadio
+            label: "Estadio"
+            type: string
+      - name: tabla
+        label: "Tabla de posiciones"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{posicion}"
+        fields:
+          - name: posicion
+            label: "Posición"
+            type: number
+          - name: nombre
+            label: "Nombre del equipo"
+            type: string
+          - name: jugados
+            label: "Partidos jugados"
+            type: number
+          - name: puntos
+            label: "Puntos"
+            type: number
+      - name: estadisticas
+        label: "Estadísticas y datos"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{etiqueta}"
+        fields:
+          - name: etiqueta
+            label: "Qué se mide"
+            type: string
+          - name: valor
+            label: "Valor"
+            type: string
+
+
 settings:
   commit:
     templates:

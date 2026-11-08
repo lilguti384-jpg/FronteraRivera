@@ -1,6 +1,6 @@
 ---
 ---
-<!doctype html><html lang="es-UY"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#c41013"><meta name="description" content="{{ site.data.sitio.seo_descripcion | escape }}"><meta property="og:type" content="website"><meta property="og:title" content="{{ site.data.sitio.seo_titulo | escape }}"><meta property="og:description" content="{{ site.data.sitio.seo_descripcion | escape }}"><title>{{ site.data.sitio.seo_titulo | escape }}</title><link rel="icon" type="image/png" href="https://fronterarivera.com/assets/img/escudo-seo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"><link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/styles.css?v=20261108-camiseta27-v3"><link rel="canonical" href="https://fronterarivera.com/"><link rel="apple-touch-icon" href="https://fronterarivera.com/assets/img/escudo-seo.png"><meta property="og:site_name" content="Frontera Rivera"><meta property="og:url" content="https://fronterarivera.com/"><meta property="og:image" content="https://fronterarivera.com/assets/img/escudo-seo.png"><meta property="og:image:alt" content="Escudo rojo y amarillo de Frontera Rivera"><meta property="og:image:width" content="512"><meta property="og:image:height" content="512"><meta name="twitter:card" content="summary"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Frontera Rivera","url":"https://fronterarivera.com/"}</script></head><body><a href="#principal" class="skip">Ir al contenido</a>
+<!doctype html><html lang="es-UY"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#c41013"><meta name="description" content="{{ site.data.sitio.seo_descripcion | escape }}"><meta property="og:type" content="website"><meta property="og:title" content="{{ site.data.sitio.seo_titulo | escape }}"><meta property="og:description" content="{{ site.data.sitio.seo_descripcion | escape }}"><title>{{ site.data.sitio.seo_titulo | escape }}</title><link rel="icon" type="image/png" href="https://fronterarivera.com/assets/img/escudo-seo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"><link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/styles.css?v=20261108-partidos-1"><link rel="canonical" href="https://fronterarivera.com/"><link rel="apple-touch-icon" href="https://fronterarivera.com/assets/img/escudo-seo.png"><meta property="og:site_name" content="Frontera Rivera"><meta property="og:url" content="https://fronterarivera.com/"><meta property="og:image" content="https://fronterarivera.com/assets/img/escudo-seo.png"><meta property="og:image:alt" content="Escudo rojo y amarillo de Frontera Rivera"><meta property="og:image:width" content="512"><meta property="og:image:height" content="512"><meta name="twitter:card" content="summary"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Frontera Rivera","url":"https://fronterarivera.com/"}</script></head><body><a href="#principal" class="skip">Ir al contenido</a>
  <header class="site-header" id="cabecera"><div class="header-inner wrap">
  <a href="index.html" class="brand" aria-label="Inicio Frontera Rivera"><img src="{{ site.data.sitio.logo | relative_url }}" alt="" width="48" height="53"><span>FRONTERA<br><small>RIVERA</small></span></a>
  <nav class="nav-desktop" aria-label="Navegación principal"><a href="index.html" aria-current="page" >Inicio</a><a href="historia/index.html" >Historia</a><a href="historia/homenajes/index.html" >Homenajes</a><a href="articulos/index.html" >Artículos</a><a href="musica/index.html" >Música</a><a href="frontera-tv/index.html" >Frontera TV</a><a href="galeria/index.html" >Galería</a><a href="contacto/index.html" >Contacto</a></nav>
@@ -45,10 +45,93 @@
 </dialog>
 {% endif %}
 
+
+<section class="next-match" id="proximo-partido" aria-labelledby="next-match-title">
+  <div class="wrap next-match-wrap">
+    <header class="next-match-header reveal">
+      <div>
+        <p class="next-match-kicker">✶ FRONTERA RIVERA · FÚTBOL ✶</p>
+        <h2 id="next-match-title">{{ site.data.partido.titulo | escape }}</h2>
+      </div>
+      <span class="next-match-status">{{ site.data.partido.competencia | default: "Encuentro por confirmar" | escape }}</span>
+    </header>
+
+    <div class="next-match-board reveal">
+      <div class="next-match-duel">
+        <div class="next-match-team">
+          <div class="next-match-crest"><img src="{{ site.data.sitio.logo | relative_url }}" alt="Escudo de Frontera Rivera" loading="lazy" width="108" height="122"></div>
+          <h3>FRONTERA<br>RIVERA</h3>
+        </div>
+        <div class="next-match-versus" aria-label="Contra"><span>VS</span><small>PRÓXIMA FECHA</small></div>
+        <div class="next-match-team">
+          <div class="next-match-crest next-match-crest-away">
+            {% if site.data.partido.escudo_rival and site.data.partido.escudo_rival != "" %}
+              <img src="{{ site.data.partido.escudo_rival | relative_url }}" alt="Escudo de {{ site.data.partido.rival | escape }}" loading="lazy" width="108" height="122">
+            {% else %}
+              <svg viewBox="0 0 112 128" width="94" height="108" aria-label="Escudo gris del rival por confirmar" role="img"><path d="M56 5C76 23 94 24 105 24V73c0 25-21 39-49 51C28 112 7 98 7 73V24C18 24 36 23 56 5Z" fill="#c4c3c0" stroke="#868582" stroke-width="5"/><path d="M56 18C71 31 86 34 94 34v39c0 18-16 29-38 39-22-10-38-21-38-39V34c8 0 23-3 38-16Z" fill="#e3e1dc"/><text x="56" y="82" text-anchor="middle" font-size="53" font-weight="700" fill="#898782">?</text></svg>
+            {% endif %}
+          </div>
+          <h3>{{ site.data.partido.rival | default: "Rival por confirmar" | escape }}</h3>
+        </div>
+      </div>
+      <div class="next-match-details">
+        <div><span class="next-match-detail-label"><span aria-hidden="true">◷</span> DÍA Y HORA</span><strong>{{ site.data.partido.fecha | default: "Fecha por confirmar" | escape }}</strong><small>{{ site.data.partido.hora | default: "Hora por confirmar" | escape }}</small></div>
+        <div><span class="next-match-detail-label"><span aria-hidden="true">⌂</span> ESTADIO</span><strong>{{ site.data.partido.estadio | default: "Estadio por confirmar" | escape }}</strong></div>
+        <div><span class="next-match-detail-label"><span aria-hidden="true">⌖</span> LUGAR</span><strong>{{ site.data.partido.lugar | default: "Lugar por confirmar" | escape }}</strong></div>
+      </div>
+      {% if site.data.partido.nota and site.data.partido.nota != "" %}
+        <p class="next-match-note">{{ site.data.partido.nota | escape }}</p>
+      {% endif %}
+    </div>
+
+    <div class="match-center reveal" aria-labelledby="match-center-title">
+      <div class="match-center-head"><div><p class="next-match-kicker">EL FÚTBOL DEL ROJO</p><h3 id="match-center-title">CENTRO DE PARTIDO<span class="match-center-star" aria-hidden="true">✶</span></h3></div><small>INFORMACIÓN DEL CLUB</small></div>
+      <div class="match-tabs" role="tablist" aria-label="Secciones del centro de partido">
+        <button id="match-tab-resultados" type="button" role="tab" aria-controls="match-panel-resultados" aria-selected="true" tabindex="0" data-match-tab="resultados">Resultados</button>
+        <button id="match-tab-entradas" type="button" role="tab" aria-controls="match-panel-entradas" aria-selected="false" tabindex="-1" data-match-tab="entradas">Entradas</button>
+        <button id="match-tab-fixture" type="button" role="tab" aria-controls="match-panel-fixture" aria-selected="false" tabindex="-1" data-match-tab="fixture">Fixture</button>
+        <button id="match-tab-tabla" type="button" role="tab" aria-controls="match-panel-tabla" aria-selected="false" tabindex="-1" data-match-tab="tabla">Tabla</button>
+        <button id="match-tab-estadisticas" type="button" role="tab" aria-controls="match-panel-estadisticas" aria-selected="false" tabindex="-1" data-match-tab="estadisticas">Estadísticas</button>
+      </div>
+      <div class="match-panel" id="match-panel-resultados" role="tabpanel" aria-labelledby="match-tab-resultados" data-match-panel="resultados">
+        {% if site.data.partido.resultado.marcador and site.data.partido.resultado.marcador != "" %}
+        <div class="match-result"><div><span class="match-panel-eyebrow">ÚLTIMO RESULTADO</span><strong>Frontera Rivera vs. {{ site.data.partido.resultado.rival | escape }}</strong><small>{{ site.data.partido.resultado.fecha | escape }}</small></div><div class="match-score">{{ site.data.partido.resultado.marcador | escape }}</div></div>
+        {% if site.data.partido.resultado.resumen and site.data.partido.resultado.resumen != "" %}<p class="match-panel-description">{{ site.data.partido.resultado.resumen | escape }}</p>{% endif %}
+        {% else %}
+        <div class="match-empty"><span class="match-empty-mark" aria-hidden="true">⚽</span><div><strong>Resultados próximamente</strong><p>Cuando haya un resultado confirmado, lo vas a encontrar en este espacio.</p></div></div>
+        {% endif %}
+      </div>
+      <div class="match-panel" id="match-panel-entradas" role="tabpanel" aria-labelledby="match-tab-entradas" data-match-panel="entradas" hidden>
+        <span class="match-panel-eyebrow">VENTA DE ENTRADAS</span>
+        <h4>{{ site.data.partido.entradas.estado | default: "Entradas por confirmar" | escape }}</h4>
+        <p class="match-panel-description">{{ site.data.partido.entradas.detalle | escape }}</p>
+        {% if site.data.partido.entradas.url and site.data.partido.entradas.url != "" %}<a class="match-center-link" href="{{ site.data.partido.entradas.url | escape }}" target="_blank" rel="noopener noreferrer">Consultar venta de entradas ↗</a>{% endif %}
+      </div>
+      <div class="match-panel" id="match-panel-fixture" role="tabpanel" aria-labelledby="match-tab-fixture" data-match-panel="fixture" hidden>
+        {% if site.data.partido.fixture.size > 0 %}
+        <div class="match-fixture-list">{% for encuentro in site.data.partido.fixture %}
+          <div class="match-fixture-row"><div><strong>{{ encuentro.rival | default: "Rival por confirmar" | escape }}</strong><small>{{ encuentro.estadio | default: "Estadio por confirmar" | escape }}</small></div><div class="match-fixture-date"><strong>{{ encuentro.fecha | default: "Fecha por confirmar" | escape }}</strong><small>{{ encuentro.hora | default: "Hora por confirmar" | escape }}</small></div></div>
+        {% endfor %}</div>
+        {% else %}<div class="match-empty"><span class="match-empty-mark" aria-hidden="true">▤</span><div><strong>Fixture por confirmar</strong><p>Los próximos encuentros se publicarán cuando estén confirmados.</p></div></div>{% endif %}
+      </div>
+      <div class="match-panel" id="match-panel-tabla" role="tabpanel" aria-labelledby="match-tab-tabla" data-match-panel="tabla" hidden>
+        {% if site.data.partido.tabla.size > 0 %}
+        <div class="match-table-wrap"><table class="match-table"><thead><tr><th scope="col">POS.</th><th scope="col">EQUIPO</th><th scope="col">PJ</th><th scope="col">PTS</th></tr></thead><tbody>{% for equipo in site.data.partido.tabla %}<tr><td>{{ equipo.posicion | escape }}</td><th scope="row">{{ equipo.nombre | escape }}</th><td>{{ equipo.jugados | escape }}</td><td>{{ equipo.puntos | escape }}</td></tr>{% endfor %}</tbody></table></div>
+        {% else %}<div class="match-empty"><span class="match-empty-mark" aria-hidden="true">≡</span><div><strong>Tabla por confirmar</strong><p>La clasificación se incorporará cuando haya datos oficiales.</p></div></div>{% endif %}
+      </div>
+      <div class="match-panel" id="match-panel-estadisticas" role="tabpanel" aria-labelledby="match-tab-estadisticas" data-match-panel="estadisticas" hidden>
+        {% if site.data.partido.estadisticas.size > 0 %}
+        <div class="match-stats">{% for dato in site.data.partido.estadisticas %}<div><strong>{{ dato.valor | escape }}</strong><span>{{ dato.etiqueta | escape }}</span></div>{% endfor %}</div>
+        {% else %}<div class="match-empty"><span class="match-empty-mark" aria-hidden="true">▥</span><div><strong>Estadísticas próximamente</strong><p>Este centro podrá reunir números y datos de partido cuando estén disponibles.</p></div></div>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section-block wrap intro-grid"><div class="editorial-block reveal"><p class="eyebrow">{{ site.data.bloques_inicio.etiqueta_identidad | escape }}</p><h2>{{ site.data.bloques_inicio.titulo_identidad | escape }}</h2><p>{{ site.data.bloques_inicio.identidad_parrafo_1 | escape }}</p><p>{{ site.data.bloques_inicio.identidad_parrafo_2 | escape }}</p><a class="text-arrow" href="historia/index.html">Conocé nuestra historia <span>↗</span></a></div><div class="quote-block reveal"><p class="eyebrow">{{ site.data.frases.etiqueta | escape }}</p><blockquote>“{{ site.data.frases.cita_padre_silva | escape }}”</blockquote><cite>{{ site.data.frases.autor_padre_silva | escape }}</cite><figure><img src="{{ site.data.frases.imagen | relative_url }}" alt="Tribuna de Frontera repleta de hinchas, banderas y colores" loading="lazy" decoding="async" class=""><figcaption>{{ site.data.frases.pie_imagen | escape }}</figcaption></figure></div></section>
 <section class="section-block wrap"><div class="section-head"><div><p class="eyebrow">{{ site.data.bloques_inicio.etiqueta_descubri | escape }}</p><h2>{{ site.data.bloques_inicio.titulo_descubri | escape }}</h2></div><p class="section-lead">{{ site.data.bloques_inicio.bajada_descubri | escape }}</p></div><div class="quick-grid"><a class="quick-card" href="historia/index.html"><span>01 / MEMORIA</span><h3>Historia</h3><p>Las raíces, las conquistas y el camino del rojo.</p><b aria-hidden="true">↗</b></a><a class="quick-card" href="historia/homenajes/index.html"><span>02 / PERSONAS</span><h3>Homenajes</h3><p>Las personas que ayudaron a construir esta historia.</p><b aria-hidden="true">↗</b></a><a class="quick-card" href="musica/index.html"><span>03 / SONIDOS</span><h3>Música</h3><p>La Cuaró también tiene sus propias canciones.</p><b aria-hidden="true">↗</b></a><a class="quick-card" href="frontera-tv/index.html"><span>04 / ARCHIVO</span><h3>Frontera TV</h3><p>La memoria del fútbol también se mira y se escucha.</p><b aria-hidden="true">↗</b></a></div></section>
 <section class="history-band"><div class="wrap history-band-grid"><div class="history-graphic"><img src="{{ site.data.bloques_inicio.imagen_ascenso | relative_url }}" alt="Festejos de Frontera Rivera durante el ascenso de 1998" loading="lazy" decoding="async" class=""></div><div class="history-copy"><p class="eyebrow gold">{{ site.data.bloques_inicio.fecha_ascenso | escape }}</p><h2>{{ site.data.bloques_inicio.titulo_ascenso | escape }}</h2><p>{{ site.data.bloques_inicio.bajada_ascenso | escape }}</p><a class="button button-yellow" href="articulos/ascenso-1998/index.html">Leé el relato del ascenso <span>↗</span></a></div></div></section>
 <section class="section-block wrap identity-zone"><div class="section-head"><div><p class="eyebrow">{{ site.data.bloques_inicio.etiqueta_simbolos | escape }}</p><h2>{{ site.data.bloques_inicio.titulo_simbolos | escape }}</h2></div><p class="section-lead">{{ site.data.bloques_inicio.bajada_simbolos | escape }}</p></div><div class="identity-layout"><div class="shields"><figure class="mini-shield"><img src="assets/img/escudo-historico.png?v=20261107-remaster" alt="Escudo de Frontera Rivera remasterizado" loading="lazy" decoding="async" class=""><figcaption>Frontera Rivera</figcaption></figure><figure class="mini-shield"><img src="assets/img/escudo-renegades.png" alt="Renegades FR — escudo histórico" loading="lazy" decoding="async" class=""><figcaption>Renegades FR</figcaption></figure><figure class="mini-shield"><img src="assets/img/escudo-rivera-chico.png" alt="Rivera Chico — escudo histórico" loading="lazy" decoding="async" class=""><figcaption>Rivera Chico</figcaption></figure></div><div class="identity-note"><div class="identity-number">1998</div><p>Un año que quedó marcado para siempre en la memoria del fútbol riverense.</p><a class="text-arrow" href="historia/index.html">Ver la cronología ↗</a></div></div></section>
 <section class="section-block wrap"><div class="section-head"><div><p class="eyebrow">El archivo escrito</p><h2>HISTORIAS PARA LEER.</h2></div><p class="section-lead">El fútbol también se cuenta en versos, recuerdos y crónicas.</p></div><div class="article-cards"><a class="article-feature red" href="articulos/ascenso-1998/index.html"><div class="article-feature-top">ARCHIVO / 1998 <span>↗</span></div><h3>LA NOCHE QUE RIVERA NO DURMIÓ</h3><p>El día en que los rojos de la Cuaró hicieron historia.</p></a><a class="article-feature cream" href="articulos/la-cuaro/index.html"><div class="article-feature-top">POESÍA / ROBERTO ARAUJO <span>↗</span></div><h3>LA CUARÓ.<small>¿LEYENDA O VERDAD?</small></h3><p>Historias del barrio contadas entre versos y humor.</p></a><a class="article-feature yellow" href="articulos/el-santo-de-rivera/index.html"><div class="article-feature-top">MEMORIA / FACUNDO <span>↗</span></div><h3>EL SANTO DE RIVERA</h3><p>El padre Silva, las campanas y una historia entrañable.</p></a></div></section>
 <section class="section-block wrap"><div class="section-head"><div><p class="eyebrow">{{ site.data.bloques_inicio.etiqueta_fotos | escape }}</p><h2>{{ site.data.bloques_inicio.titulo_fotos | escape }}</h2></div><p class="section-lead">{{ site.data.bloques_inicio.bajada_fotos | escape }}</p></div><div class="home-gallery">{% for foto in site.data.portada_galeria %}<figure><img src="{{ foto.imagen | relative_url }}" alt="{{ foto.alt | default: foto.titulo | escape }}" loading="lazy" decoding="async"><figcaption>{{ foto.titulo | escape }}</figcaption></figure>{% endfor %}</div><a class="button button-red" href="galeria/index.html">Ver toda la galería <span>↗</span></a></section>
-<section class="section-block wrap music-teaser"><div><p class="eyebrow">{{ site.data.bloques_inicio.etiqueta_musica | escape }}</p><h2>{{ site.data.bloques_inicio.titulo_musica | escape | newline_to_br }}</h2><p>{{ site.data.bloques_inicio.bajada_musica | escape }}</p><a class="button button-red" href="musica/index.html">Escuchá la música ↗</a></div><img src="{{ site.data.sitio.mascota | relative_url }}" alt="El Diablito, mascota de Frontera Rivera" loading="lazy" decoding="async" class=""></section></main>{% include pie.html %}<script src="assets/app.js?v=20261108-camiseta27" defer></script></body></html>
+<section class="section-block wrap music-teaser"><div><p class="eyebrow">{{ site.data.bloques_inicio.etiqueta_musica | escape }}</p><h2>{{ site.data.bloques_inicio.titulo_musica | escape | newline_to_br }}</h2><p>{{ site.data.bloques_inicio.bajada_musica | escape }}</p><a class="button button-red" href="musica/index.html">Escuchá la música ↗</a></div><img src="{{ site.data.sitio.mascota | relative_url }}" alt="El Diablito, mascota de Frontera Rivera" loading="lazy" decoding="async" class=""></section></main>{% include pie.html %}<script src="assets/app.js?v=20261108-partidos-1" defer></script></body></html>
