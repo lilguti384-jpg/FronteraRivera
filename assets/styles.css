@@ -75,16 +75,16 @@ h1, h2, h3,
 .kit2027-heading{grid-area:title;align-self:end;min-width:0}
 .kit2027-overline{display:inline-flex;align-items:center;gap:10px;font-size:.71rem;letter-spacing:.14em;font-weight:900;color:var(--red);margin-bottom:20px}
 .kit2027-overline span{font-size:1.5rem;color:var(--yellow)}
-.kit2027-heading h2{font-family:var(--font-head);font-size:clamp(2.65rem,5.7vw,5.6rem);line-height:.94;letter-spacing:-.03em;margin:0 0 22px;text-wrap:balance}
+.kit2027-heading h2{font-family:var(--font-head);font-size:clamp(2.2rem,4.5vw,4.4rem);line-height:1;letter-spacing:-.025em;margin:0 0 22px;text-wrap:balance;overflow-wrap:normal;word-break:normal;hyphens:none}
 .kit2027-subtitle{font-family:var(--font-orn);font-style:italic;font-size:clamp(1.45rem,2.6vw,2.1rem);line-height:1.2;color:var(--red);margin:0}
 .kit2027-body{grid-area:body;align-self:start;min-width:0}
 .kit2027-copy{font-size:clamp(1rem,1.4vw,1.14rem);line-height:1.75;margin:0 0 22px;max-width:52ch}
 .kit2027-note{font-size:.81rem;line-height:1.55;color:var(--muted);max-width:57ch;border-left:3px solid var(--line);padding:7px 0 7px 14px;margin:0}
 .kit2027-stamp{display:block;color:var(--red);font-size:.67rem;letter-spacing:.13em;font-weight:800;opacity:.82;margin-top:22px}
-.kit2027-art{grid-area:visual;position:relative;min-width:0;background:var(--red);border:12px solid var(--red);border-radius:4px;box-shadow:18px 18px 0 var(--yellow),0 12px 40px rgba(55,10,0,.14);transform:rotate(-1deg);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.kit2027-art{grid-area:visual;position:relative;min-width:0;background:var(--red);border:0;border-radius:4px;box-shadow:18px 18px 0 var(--yellow),0 12px 40px rgba(55,10,0,.14);transform:rotate(-1deg);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
 .kit2027-art:hover,.kit2027-art:focus-within{transform:rotate(0) translateY(-7px);box-shadow:21px 23px 0 var(--yellow),0 22px 42px rgba(55,10,0,.16)}
-.kit2027-image-button{display:flex;position:relative;align-items:center;justify-content:center;width:100%;aspect-ratio:4/5;max-height:570px;min-height:280px;padding:13px;border:0;overflow:hidden;background:var(--red);cursor:zoom-in}
-.kit2027-image-button img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 14px 24px rgba(20,0,0,.2));transition:transform .4s}
+.kit2027-image-button{display:flex;position:relative;align-items:center;justify-content:center;width:100%;aspect-ratio:4/5;max-height:none;min-height:0;padding:0;border:0;overflow:hidden;background:var(--red);cursor:zoom-in}
+.kit2027-image-button img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .4s}
 .kit2027-image-button:hover img,.kit2027-image-button:focus-visible img{transform:scale(1.045)}
 .kit2027-zoom{position:absolute;right:13px;bottom:13px;background:var(--cream);color:#261711;padding:10px 12px;letter-spacing:.07em;font-size:.72rem;font-weight:900}
 .kit2027-pending{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:15px;min-height:300px;max-height:570px;aspect-ratio:4/5;padding:25px;color:#fff8eb;text-align:center}
@@ -101,11 +101,11 @@ body.dark .kit2027-zoom{background:#fff8ea;color:#261711}
 @media(max-width:760px){
 .kit2027-section{padding:36px 0 54px}
 .kit2027-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "visual" "body";gap:24px}
-.kit2027-heading h2{font-size:clamp(2.4rem,11vw,4.25rem)}
+.kit2027-heading h2{font-size:clamp(2.05rem,8.4vw,3.75rem)}
 .kit2027-overline{font-size:.65rem;margin-bottom:15px}
-.kit2027-art{width:calc(100% - 18px);margin-right:18px;border-width:9px;box-shadow:12px 12px 0 var(--yellow)}
+.kit2027-art{width:calc(100% - 18px);margin-right:18px;border:0;box-shadow:12px 12px 0 var(--yellow)}
 .kit2027-art:hover,.kit2027-art:focus-within{transform:rotate(0) translateY(-3px);box-shadow:12px 14px 0 var(--yellow)}
-.kit2027-image-button,.kit2027-pending{aspect-ratio:4/4.7;min-height:250px;max-height:540px}
+.kit2027-image-button,.kit2027-pending{aspect-ratio:4/5;min-height:0;max-height:none}
 .kit2027-copy{font-size:1.02rem}
 .kit2027-note{font-size:.78rem}
 }
