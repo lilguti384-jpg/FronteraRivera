@@ -523,6 +523,11 @@ content:
       - name: pie_firma
         label: "Firma del creador"
         type: string
+      - name: imagen_compartir
+        label: "Imagen al compartir la web (WhatsApp y redes)"
+        type: image
+        options:
+          media: fotos
       - name: seo_titulo
         label: "Título de la portada para Google"
         type: string
