@@ -28,7 +28,7 @@
       "id": "galeria-ascenso-festejos",
       "title": "ASCENSO FESTEJOS",
       "description": "Los jugadores celebrando el ascenso en el Parque Viera.",
-      "image": "assets/img/galeria-ascenso-festejos.webp"
+      "image": "assets/img/suelo.png"
     },
     {
       "id": "portada-2024",
@@ -52,13 +52,13 @@
       "id": "ascenso-gente",
       "title": "LA HINCHADA",
       "description": "Una imagen histórica de la pasión por Frontera.",
-      "image": "assets/img/ascenso-gente.webp"
+      "image": "assets/img/gente.png"
     },
     {
       "id": "ascenso-caravana",
       "title": "LA CARAVANA",
       "description": "El regreso de los campeones y la fiesta de Rivera.",
-      "image": "assets/img/ascenso-caravana.webp"
+      "image": "assets/img/noche.png"
     },
     {
       "id": "hinchada",
