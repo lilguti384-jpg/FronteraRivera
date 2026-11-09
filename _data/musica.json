@@ -14,13 +14,13 @@
   {
     "title": "De la Cuaró y del Frontera",
     "artist": "Maciegas",
-    "description": "En la lucha por volver, Maciegas sacó esta música para seguir dando ánimos a la gente del rojo.",
+    "description": "En plena lucha por volver, Maciegas lanzó esta canción para seguir alentando a la gente del Rojo.",
     "audio": "/assets/audio/de-la-cuaro.mp3"
   },
   {
     "title": "Candombe de Cuaró",
     "artist": "Anderson Román",
-    "description": "Candombe creado por un hincha, que acompañó en la vuelta al fútbol AUF en 2024.",
+    "description": "Candombe creado por un hincha para acompañar el regreso de Frontera al fútbol de la AUF en 2024.",
     "audio": "/assets/audio/candombe-cuaro.mp3"
   }
 ]
