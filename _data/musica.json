@@ -1,15 +1,15 @@
 [
   {
+    "title": "Candombe de Cuaró",
+    "artist": "Anderson Román",
+    "description": "Candombe creado por un hincha para acompañar el regreso de Frontera al fútbol de la AUF en 2024.",
+    "audio": "/assets/audio/candombe-cuaro.mp3"
+  },
+  {
     "title": "Dale rojo",
     "artist": "Maciegas",
     "description": "Himno de Frontera Rivera remasterizado para la vuelta en 2024 por Maciegas.",
     "audio": "/assets/audio/dale-rojo.mp3"
-  },
-  {
-    "title": "Hino prainshada lúmpe dus diablo rojo da Cuaró",
-    "artist": "Chito de Mello",
-    "description": "Canción del popular artista Chito de Mello, símbolo de nuestra frontera, dedicada a la hinchada de Frontera.",
-    "audio": "/assets/audio/hino-prainshada.mp3"
   },
   {
     "title": "De la Cuaró y del Frontera",
@@ -18,9 +18,9 @@
     "audio": "/assets/audio/de-la-cuaro.mp3"
   },
   {
-    "title": "Candombe de Cuaró",
-    "artist": "Anderson Román",
-    "description": "Candombe creado por un hincha para acompañar el regreso de Frontera al fútbol de la AUF en 2024.",
-    "audio": "/assets/audio/candombe-cuaro.mp3"
+    "title": "Hino prainshada lúmpe dus diablo rojo da Cuaró",
+    "artist": "Chito de Mello",
+    "description": "Canción del popular artista Chito de Mello, símbolo de nuestra frontera, dedicada a la hinchada de Frontera.",
+    "audio": "/assets/audio/hino-prainshada.mp3"
   }
 ]
