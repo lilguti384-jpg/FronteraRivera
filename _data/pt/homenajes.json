@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Walter Silva Godoy",
+    "slug": "walter-silva-godoy",
+    "image": "/assets/img/walter-silva.webp"
+  },
+  {
+    "name": "Nenito Araujo",
+    "slug": "nenito-araujo"
+  },
+  {
+    "name": "Enrique “Groncho” Souza",
+    "slug": "el-groncho"
+  },
+  {
+    "name": "Chito de Mello",
+    "slug": "chito-de-mello"
+  },
+  {
+    "name": "José Sandín Alvez",
+    "slug": "jose-sandin",
+    "image": "/assets/img/jose-sandin.webp"
+  }
+]

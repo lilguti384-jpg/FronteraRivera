@@ -1,0 +1,80 @@
+[
+  {
+    "id": "galeria-nacional",
+    "title": "FRONTERA VS NACIONAL",
+    "description": "Rubén Sosa diante de Rubén Paz, no Estádio Atilio Paiva Olivera.",
+    "image": "/assets/img/galeria-nacional.webp"
+  },
+  {
+    "id": "galeria-penarol",
+    "title": "FRONTERA VS PEÑAROL",
+    "description": "Rubén Paz diante de Pablo Bengoechea, no Estádio Atilio Paiva Olivera.",
+    "image": "/assets/img/galeria-penarol.webp"
+  },
+  {
+    "id": "galeria-la-loca",
+    "title": "LA LOCA",
+    "description": "A torcida antiga do Frontera.",
+    "image": "/assets/img/galeria-la-loca.webp"
+  },
+  {
+    "id": "galeria-jugadores",
+    "title": "JOGADORES",
+    "description": "O Frontera Rivera comemorando um gol contra o Peñarol.",
+    "image": "/assets/img/galeria-jugadores.webp"
+  },
+  {
+    "id": "galeria-ascenso-festejos",
+    "title": "FESTA DO ACESSO",
+    "description": "Os jogadores comemoram o acesso no Parque Viera.",
+    "image": "/assets/img/suelo.png"
+  },
+  {
+    "id": "portada-2024",
+    "title": "RETORNO 2024",
+    "description": "O retorno do Frontera e de sua gente. Fotografia de Joaquín Duarte.",
+    "image": "/assets/img/portada-2024.webp"
+  },
+  {
+    "id": "ascenso-diario",
+    "title": "O ACESSO",
+    "description": "Uma notícia de jornal que ficou na memória do clube.",
+    "image": "/assets/img/ascenso-diario.webp"
+  },
+  {
+    "id": "ascenso-plantel",
+    "title": "ELENCO",
+    "description": "Uma fotografia do time do Frontera.",
+    "image": "/assets/img/ascenso-plantel.webp"
+  },
+  {
+    "id": "ascenso-gente",
+    "title": "A TORCIDA",
+    "description": "Uma imagem histórica no Parque Viera, com a torcida do Frontera.",
+    "image": "/assets/img/gente.png"
+  },
+  {
+    "id": "ascenso-caravana",
+    "title": "A CARAVANA",
+    "description": "A caravana no dia do acesso.",
+    "image": "/assets/img/noche.png"
+  },
+  {
+    "id": "hinchada",
+    "title": "LA CUARÓ",
+    "description": "LBDC e moradores de Rivera torcendo no dia do retorno em 2024.",
+    "image": "/assets/img/hinchada.webp"
+  },
+  {
+    "id": "jose-sandin",
+    "title": "JOSÉ SANDÍN ALVEZ",
+    "description": "Torcedor e dirigente do Frontera, vibrando na arquibancada no dia do acesso.",
+    "image": "/assets/img/jose-sandin.webp"
+  },
+  {
+    "id": "LBDC",
+    "title": "LBDC NA PRAÇA",
+    "description": "A torcida se preparando para a partida na praça do bairro.",
+    "image": "/assets/img/79977047216994949544763154784120054746992723n.jpg"
+  }
+]

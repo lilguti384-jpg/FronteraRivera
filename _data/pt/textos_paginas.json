@@ -1,0 +1,42 @@
+{
+  "historia": {
+    "etiqueta": "FRONTERA / ACERVO",
+    "titulo": "NOSSA HISTÓRIA.",
+    "descripcion": "Uma história tecida entre vizinhos, clubes, fotografias e gerações de Rivera Chico.",
+    "cronologia_titulo": "CRONOLOGIA.",
+    "cronologia_descripcion": "Uma linha do tempo que continuará crescendo com o acervo do clube."
+  },
+  "galeria": {
+    "etiqueta": "MEMÓRIA / FOTOGRAFIAS",
+    "titulo": "GALERIA.",
+    "descripcion": "Uma coleção de fotografias do Frontera Rivera, de sua torcida e dos momentos que fazem parte da sua história.",
+    "subtitulo": "IMAGENS QUE FICARAM.",
+    "bajada": "Um cantinho de lembranças vermelhas"
+  },
+  "musica": {
+    "etiqueta": "LA CUARÓ / SONS",
+    "titulo": "MÚSICA.",
+    "descripcion": "Milongões, hinos e canções ligados ao bairro e ao clube. Cada gravação tem seu lugar.",
+    "bajada": "Quatro canções que acompanham a memória, a luta e a identidade do vermelho."
+  },
+  "homenajes": {
+    "etiqueta": "PESSOAS / BAIRRO / FRONTERA",
+    "titulo": "HOMENAGENS.",
+    "descripcion": "Homenagens a pessoas importantes que lutaram pelo clube ou pelo bairro e inspiraram a criação deste site.",
+    "subtitulo": "PESSOAS DA NOSSA HISTÓRIA.",
+    "bajada": "Um acervo aberto a novas fotografias, lembranças e biografias verificadas."
+  },
+  "tv": {
+    "etiqueta": "FRONTERA / AUDIOVISUAL",
+    "titulo": "FRONTERA TV.",
+    "descripcion": "Histórias que ficaram em movimento: imagens, vídeos e depoimentos do nosso clube."
+  },
+  "contacto": {
+    "etiqueta": "OUVIMOS VOCÊ / CONTATO",
+    "titulo": "FALE CONOSCO.",
+    "descripcion": "Você tem uma história, uma foto, uma lembrança ou algo para contar? Gostaríamos de ouvir você.",
+    "formulario_titulo": "CONTE SUA HISTÓRIA.",
+    "lateral_titulo": "A CUARÓ TEM MUITAS HISTÓRIAS!",
+    "lateral_texto": "Se preferir, você também pode escrever diretamente por e-mail."
+  }
+}
