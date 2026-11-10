@@ -18,6 +18,22 @@
   <url><loc>https://fronterarivera.com/frontera-tv/</loc></url>
   <url><loc>https://fronterarivera.com/galeria/</loc></url>
   <url><loc>https://fronterarivera.com/contacto/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/historia/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/historia/homenajes/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/historia/homenajes/walter-silva-godoy/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/historia/homenajes/jose-sandin/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/historia/homenajes/nenito-araujo/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/historia/homenajes/el-groncho/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/historia/homenajes/chito-de-mello/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/articulos/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/articulos/la-cuaro/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/articulos/ascenso-1998/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/articulos/el-santo-de-rivera/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/musica/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/frontera-tv/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/galeria/</loc></url>
+  <url><loc>https://fronterarivera.com/pt/contacto/</loc></url>
 {% for post in site.posts %}
   <url><loc>{{ post.url | absolute_url | xml_escape }}</loc></url>
 {% endfor %}
