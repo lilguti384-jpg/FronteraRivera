@@ -1,0 +1,1 @@
+{% assign t = include.titulo | strip %}{% assign up = t | upcase %}{% if t == up %}{{ t | downcase | capitalize | escape }}{% else %}{{ t | escape }}{% endif %}

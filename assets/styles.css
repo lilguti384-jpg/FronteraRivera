@@ -340,3 +340,7 @@ html:lang(pt) .hero-copy h1 { font-size: clamp(2rem, 14cqi, 5.2rem); }
     to { transform: rotate(-5deg) scale(1); }
   }
 }
+/* Idioma y modo oscuro: misma altura y alineados al centro */
+.header-buttons{align-items:center}
+.header-buttons .language-toggle,.header-buttons .dark-toggle{height:44px;min-height:44px;box-sizing:border-box;margin:0}
+.header-buttons .language-toggle a{min-height:42px;height:42px;box-sizing:border-box}
