@@ -300,3 +300,14 @@ body.dark .kit2027-zoom{background:#fff8ea;color:#261711}
 .match-fixture-row strong{font-size:.86rem}
 }
 @media(prefers-reduced-motion:reduce){.match-tabs button{transition:none}}
+
+/* Selector ES / PT: compact, accessible, mobile friendly. */
+.language-toggle{display:inline-flex;align-items:center;border:1px solid var(--red);border-radius:9px;overflow:hidden;flex-shrink:0;background:var(--paper);min-height:42px}
+.language-toggle a{display:flex;justify-content:center;align-items:center;min-width:38px;min-height:42px;padding:5px 9px;font:900 .76rem var(--font-body);letter-spacing:.04em;color:var(--red);text-decoration:none;transition:background .2s,color .2s}
+.language-toggle a+a{border-left:1px solid var(--line)}
+.language-toggle a[aria-current="true"]{background:var(--red);color:#fff}
+.language-toggle a:focus-visible{outline:2px solid var(--yellow);outline-offset:-3px}
+.language-toggle a:not([aria-current]):hover{background:color-mix(in srgb,var(--yellow) 35%,var(--paper))}
+@media(max-width:650px){.header-inner .language-toggle a{min-width:36px;min-height:42px;padding:5px 7px}}
+@media(max-width:450px){.header-buttons{gap:5px}.header-buttons .dark-label{display:none}.language-toggle{min-height:39px}.language-toggle a{min-height:39px}.header-inner .brand span{font-size:.82rem}}
+@media(prefers-reduced-motion:reduce){.language-toggle a{transition:none}}
