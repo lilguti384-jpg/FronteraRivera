@@ -311,3 +311,12 @@ body.dark .kit2027-zoom{background:#fff8ea;color:#261711}
 @media(max-width:650px){.header-inner .language-toggle a{min-width:36px;min-height:42px;padding:5px 7px}}
 @media(max-width:450px){.header-buttons{gap:5px}.header-buttons .dark-label{display:none}.language-toggle{min-height:39px}.language-toggle a{min-height:39px}.header-inner .brand span{font-size:.82rem}}
 @media(prefers-reduced-motion:reduce){.language-toggle a{transition:none}}
+
+/* No celular pequeno o modo escuro segue acessível pelo menu hambúrguer. */
+@media(max-width:390px){
+  .header-buttons>.dark-toggle{display:none}
+  .header-inner{gap:8px}
+  .header-inner .brand{gap:6px}
+  .header-inner .brand img{width:40px;height:50px}
+  .header-inner .brand span{font-size:.78rem}
+}
