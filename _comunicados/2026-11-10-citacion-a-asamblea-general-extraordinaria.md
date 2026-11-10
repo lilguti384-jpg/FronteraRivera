@@ -1,5 +1,5 @@
 ---
-title: CITACIÓN A ASAMBLEA GENERAL EXTRAORDINARIA
+title: Citación a asamblea general extraordinaria
 date: 2026-11-10
 description: Frontera Rivera Fútbol Club cita a sus socios a una asamblea
   general extraordinaria el 16 de noviembre de 2026, a las 19:00 horas, en Cuaró
