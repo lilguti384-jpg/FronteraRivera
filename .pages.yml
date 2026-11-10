@@ -686,6 +686,589 @@ content:
             type: string
 
 
+  # Contenidos editables para el sitio en portugués
+  - name: pt_inicio
+    label: "Português · Portada del inicio"
+    type: file
+    path: _data/pt/inicio.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: linea1
+        label: Primera línea del título
+        type: string
+        required: true
+      - name: linea2
+        label: Segunda línea
+        type: string
+        required: true
+      - name: destacado
+        label: Palabra destacada
+        type: string
+        required: true
+      - name: introduccion
+        label: Texto de presentación
+        type: text
+        required: true
+      - name: portada
+        label: Fotografía principal
+        type: image
+        options:
+          media: fotos
+      - name: credito
+        label: Crédito de la fotografía
+        type: string
+      - name: kicker
+        label: "Texto pequeño arriba del título"
+        type: string
+      - name: frase_foto
+        label: "Frase junto a la fotografía"
+        type: string
+
+  - name: pt_galeria
+    label: "Português · Galería de fotos"
+    type: file
+    path: _data/pt/galeria.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: id
+        label: Identificador único
+        type: string
+        description: No cambies el ID de una fotografía ya publicada.
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: description
+        label: Descripción o crédito
+        type: text
+      - name: image
+        label: Fotografía
+        type: image
+        required: true
+        options:
+          media: fotos
+
+  - name: pt_musica
+    label: "Português · Música"
+    type: file
+    path: _data/pt/musica.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: title
+        label: Título de la canción
+        type: string
+        required: true
+      - name: artist
+        label: Artista o intérprete
+        type: string
+        required: true
+      - name: description
+        label: Descripción
+        type: text
+      - name: audio
+        label: Archivo de audio
+        type: file
+        required: true
+        options:
+          media: audios
+          categories: [audio]
+
+  - name: pt_homenajes
+    label: "Português · Homenajes"
+    type: file
+    path: _data/pt/homenajes.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: name
+        label: Nombre
+        type: string
+        required: true
+      - name: slug
+        label: URL corta (sin espacios)
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+        description: "Ejemplo: walter-silva-godoy. No modificar si ya está publicado."
+      - name: image
+        label: Retrato (opcional)
+        type: image
+        options:
+          media: fotos
+      - name: biography
+        label: Historia, recuerdos y biografía
+        type: rich-text
+        options:
+          format: markdown
+
+  - name: pt_frases
+    label: "Português · Frase del Padre Silva"
+    type: file
+    path: _data/pt/frases.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: etiqueta
+        label: "Etiqueta pequeña"
+        type: string
+      - name: cita_padre_silva
+        label: "Cita íntegra del Padre Silva"
+        type: text
+      - name: autor_padre_silva
+        label: "Autor de la cita"
+        type: string
+      - name: imagen
+        label: "Foto de la hinchada junto a la cita"
+        type: image
+        options:
+          media: fotos
+      - name: pie_imagen
+        label: "Pie de foto"
+        type: string
+
+  - name: pt_bloques_inicio
+    label: "Português · Más textos del Inicio"
+    type: file
+    path: _data/pt/bloques_inicio.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: etiqueta_identidad
+        label: "etiqueta identidad"
+        type: string
+      - name: titulo_identidad
+        label: "titulo identidad"
+        type: string
+      - name: identidad_parrafo_1
+        label: "identidad parrafo 1"
+        type: text
+      - name: identidad_parrafo_2
+        label: "identidad parrafo 2"
+        type: text
+      - name: etiqueta_descubri
+        label: "etiqueta descubri"
+        type: string
+      - name: titulo_descubri
+        label: "titulo descubri"
+        type: string
+      - name: bajada_descubri
+        label: "bajada descubri"
+        type: string
+      - name: fecha_ascenso
+        label: "fecha ascenso"
+        type: string
+      - name: titulo_ascenso
+        label: "titulo ascenso"
+        type: string
+      - name: bajada_ascenso
+        label: "bajada ascenso"
+        type: text
+      - name: imagen_ascenso
+        label: "imagen ascenso"
+        type: image
+        options:
+          media: fotos
+      - name: etiqueta_simbolos
+        label: "etiqueta simbolos"
+        type: string
+      - name: titulo_simbolos
+        label: "titulo simbolos"
+        type: string
+      - name: bajada_simbolos
+        label: "bajada simbolos"
+        type: string
+      - name: etiqueta_fotos
+        label: "etiqueta fotos"
+        type: string
+      - name: titulo_fotos
+        label: "titulo fotos"
+        type: string
+      - name: bajada_fotos
+        label: "bajada fotos"
+        type: string
+      - name: etiqueta_musica
+        label: "etiqueta musica"
+        type: string
+      - name: titulo_musica
+        label: "titulo musica"
+        type: text
+      - name: bajada_musica
+        label: "bajada musica"
+        type: string
+
+  - name: pt_portada_galeria
+    label: "Português · Fotos destacadas del Inicio"
+    type: file
+    path: _data/pt/portada_galeria.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: titulo
+        label: "Pie de foto"
+        type: string
+      - name: imagen
+        label: "Fotografía"
+        type: image
+        options:
+          media: fotos
+      - name: alt
+        label: "Descripción de la imagen"
+        type: text
+
+  - name: pt_historia_texto
+    label: "Português · Relato completo de Historia"
+    type: file
+    path: _data/pt/historia_texto.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: subtitulo
+        label: "Etiqueta"
+        type: string
+      - name: titulo
+        label: "Título del relato"
+        type: string
+      - name: cuerpo
+        label: "Texto completo"
+        type: rich-text
+        options:
+          format: markdown
+      - name: imagen
+        label: "Imagen de Historia"
+        type: image
+        options:
+          media: fotos
+      - name: imagen_credito
+        label: "Pie de imagen"
+        type: string
+
+  - name: pt_cronologia
+    label: "Português · Cronología histórica"
+    type: file
+    path: _data/pt/cronologia.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: anio
+        label: "Año"
+        type: string
+      - name: titulo
+        label: "Título del acontecimiento"
+        type: string
+      - name: descripcion
+        label: "Descripción histórica"
+        type: text
+
+  - name: pt_videos
+    label: "Português · Frontera TV — videos"
+    type: file
+    path: _data/pt/videos.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: id
+        label: "ID de YouTube (11 caracteres)"
+        type: string
+        required: true
+        pattern: "^[A-Za-z0-9_-]{11}$"
+      - name: inicio
+        label: "Empezar desde el segundo (0 si no)"
+        type: number
+      - name: etiqueta
+        label: "Categoría del video"
+        type: string
+      - name: titulo
+        label: "Título"
+        type: string
+      - name: descripcion
+        label: "Descripción"
+        type: text
+
+  - name: pt_textos_paginas
+    label: "Português · Títulos y textos de cada página"
+    type: file
+    path: _data/pt/textos_paginas.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: historia
+        label: "Historia"
+        type: object
+        fields:
+          - name: etiqueta
+            label: "Etiqueta"
+            type: string
+          - name: titulo
+            label: "Título principal"
+            type: string
+          - name: descripcion
+            label: "Subtítulo"
+            type: text
+          - name: cronologia_titulo
+            label: "Título cronología"
+            type: string
+          - name: cronologia_descripcion
+            label: "Descripción cronología"
+            type: text
+      - name: galeria
+        label: "Galería"
+        type: object
+        fields:
+          - name: etiqueta
+            label: "Etiqueta"
+            type: string
+          - name: titulo
+            label: "Título principal"
+            type: string
+          - name: descripcion
+            label: "Subtítulo"
+            type: text
+          - name: subtitulo
+            label: "Título del archivo"
+            type: string
+          - name: bajada
+            label: "Bajada del archivo"
+            type: text
+      - name: musica
+        label: "Música"
+        type: object
+        fields:
+          - name: etiqueta
+            label: "Etiqueta"
+            type: string
+          - name: titulo
+            label: "Título principal"
+            type: string
+          - name: descripcion
+            label: "Subtítulo"
+            type: text
+          - name: bajada
+            label: "Bajada del catálogo"
+            type: text
+      - name: homenajes
+        label: "Homenajes"
+        type: object
+        fields:
+          - name: etiqueta
+            label: "Etiqueta"
+            type: string
+          - name: titulo
+            label: "Título principal"
+            type: string
+          - name: descripcion
+            label: "Descripción"
+            type: text
+          - name: subtitulo
+            label: "Título de las tarjetas"
+            type: string
+          - name: bajada
+            label: "Bajada de las tarjetas"
+            type: text
+      - name: tv
+        label: "Frontera TV"
+        type: object
+        fields:
+          - name: etiqueta
+            label: "Etiqueta"
+            type: string
+          - name: titulo
+            label: "Título principal"
+            type: string
+          - name: descripcion
+            label: "Descripción"
+            type: text
+      - name: contacto
+        label: "Contacto"
+        type: object
+        fields:
+          - name: etiqueta
+            label: "Etiqueta"
+            type: string
+          - name: titulo
+            label: "Título principal"
+            type: string
+          - name: descripcion
+            label: "Descripción"
+            type: text
+          - name: formulario_titulo
+            label: "Título del formulario"
+            type: string
+          - name: lateral_titulo
+            label: "Título de la columna amarilla"
+            type: string
+          - name: lateral_texto
+            label: "Texto de la columna amarilla"
+            type: text
+
+  - name: pt_camiseta_2027
+    label: "Português · Camiseta alternativa 2027"
+    type: file
+    path: _data/pt/camiseta_2027.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: titulo
+        label: "Título"
+        type: string
+        required: true
+      - name: subtitulo
+        label: "Subtítulo"
+        type: string
+      - name: descripcion
+        label: "Texto de presentación"
+        type: text
+        required: true
+      - name: imagen
+        label: "Imagen ALTERNATIVA27"
+        type: image
+        options:
+          media: fotos
+      - name: aviso
+        label: "Aviso del prototipo"
+        type: text
+
+  - name: pt_partido
+    label: "Português · Próximo partido y centro de partido"
+    type: file
+    path: _data/pt/partido.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: titulo
+        label: "Título de la sección (ej. PRÓXIMO PARTIDO)"
+        type: string
+      - name: competencia
+        label: "Competencia / categoría"
+        type: string
+      - name: rival
+        label: "Nombre del rival"
+        type: string
+      - name: escudo_rival
+        label: "Escudo del rival (dejar vacío para gris)"
+        type: image
+        options:
+          media: fotos
+      - name: fecha
+        label: "Fecha del partido (texto)"
+        type: string
+      - name: hora
+        label: "Hora del partido (texto)"
+        type: string
+      - name: estadio
+        label: "Estadio"
+        type: string
+      - name: lugar
+        label: "Ciudad / lugar"
+        type: string
+      - name: nota
+        label: "Aviso debajo de la ficha"
+        type: text
+      - name: resultado
+        label: "Último resultado"
+        type: object
+        fields:
+          - name: rival
+            label: "Rival"
+            type: string
+          - name: fecha
+            label: "Fecha"
+            type: string
+          - name: marcador
+            label: "Marcador (ej. 2 - 1)"
+            type: string
+          - name: resumen
+            label: "Crónica breve"
+            type: text
+      - name: entradas
+        label: "Venta de entradas"
+        type: object
+        fields:
+          - name: estado
+            label: "Título o estado"
+            type: string
+          - name: detalle
+            label: "Detalles de la venta"
+            type: text
+          - name: url
+            label: "Enlace oficial de venta de entradas (opcional)"
+            type: string
+      - name: fixture
+        label: "Próximos encuentros / fixture"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{rival}"
+        fields:
+          - name: rival
+            label: "Rival"
+            type: string
+          - name: fecha
+            label: "Fecha"
+            type: string
+          - name: hora
+            label: "Hora"
+            type: string
+          - name: estadio
+            label: "Estadio"
+            type: string
+      - name: tabla
+        label: "Tabla de posiciones"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{posicion}"
+        fields:
+          - name: posicion
+            label: "Posición"
+            type: number
+          - name: nombre
+            label: "Nombre del equipo"
+            type: string
+          - name: jugados
+            label: "Partidos jugados"
+            type: number
+          - name: puntos
+            label: "Puntos"
+            type: number
+      - name: estadisticas
+        label: "Estadísticas y datos"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{etiqueta}"
+        fields:
+          - name: etiqueta
+            label: "Qué se mide"
+            type: string
+          - name: valor
+            label: "Valor"
+            type: string
+
 settings:
   commit:
     templates:
