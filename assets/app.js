@@ -1,6 +1,7 @@
 (()=>{
   'use strict';
   const by=(s)=>document.querySelector(s), all=(s)=>[...document.querySelectorAll(s)];
+  const pt=document.documentElement.lang.toLowerCase().startsWith('pt');
   // Clean URLs when served by HTTP; file:// always navigates to index.html directly.
   if(location.protocol==='http:'||location.protocol==='https:') all('a[href]').forEach(a=>{
     const url=a.getAttribute('href');
@@ -9,12 +10,12 @@
     else if(url.endsWith('/index.html'))a.setAttribute('href',url.slice(0,-10));
   });
   const toggle=by('#menuToggle'), menu=by('#mobileNav');
-  function closeMenu(){menu?.classList.remove('open');toggle?.setAttribute('aria-expanded','false');toggle?.setAttribute('aria-label','Abrir menú')}
-  toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');menu?.classList.toggle('open',open)});
+  function closeMenu(){menu?.classList.remove('open');toggle?.setAttribute('aria-expanded','false');toggle?.setAttribute('aria-label',pt?'Abrir menu':'Abrir menú')}
+  toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?(pt?'Fechar menu':'Cerrar menú'):(pt?'Abrir menu':'Abrir menú'));menu?.classList.toggle('open',open)});
   all('#mobileNav a').forEach(a=>a.addEventListener('click',closeMenu));
   const darkBtns=all('[data-dark-toggle]');
   let isDark=false;try{isDark=localStorage.getItem('frontera-dark')==='true'}catch{}
-  function renderDark(){document.body.classList.toggle('dark',isDark);darkBtns.forEach(btn=>{btn.setAttribute('aria-pressed',String(isDark));btn.setAttribute('aria-label',isDark?'Activar modo claro':'Activar modo oscuro');const label=btn.querySelector('.dark-label');if(label)label.textContent=isDark?'Modo claro':'Modo oscuro';else if(btn.classList.contains('mobile-dark'))btn.textContent=isDark?'☀ Modo claro':'◐ Modo oscuro'})}
+  function renderDark(){document.body.classList.toggle('dark',isDark);darkBtns.forEach(btn=>{btn.setAttribute('aria-pressed',String(isDark));btn.setAttribute('aria-label',isDark?(pt?'Ativar modo claro':'Activar modo claro'):(pt?'Ativar modo escuro':'Activar modo oscuro'));const label=btn.querySelector('.dark-label');if(label)label.textContent=isDark?(pt?'Modo claro':'Modo claro'):(pt?'Modo escuro':'Modo oscuro');else if(btn.classList.contains('mobile-dark'))btn.textContent=isDark?(pt?'☀ Modo claro':'☀ Modo claro'):(pt?'◐ Modo escuro':'◐ Modo oscuro')})}
   renderDark();darkBtns.forEach(btn=>btn.addEventListener('click',()=>{isDark=!isDark;try{localStorage.setItem('frontera-dark',String(isDark))}catch{}renderDark()}));
   // Reveal only when JS is available; otherwise content remains visible.
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window){
@@ -23,7 +24,7 @@
     all('.reveal').forEach(el=>observer.observe(el));
   }
   // Copy and WhatsApp share
-  all('[data-copy-link]').forEach(btn=>btn.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);btn.textContent='¡Enlace copiado!'}catch{btn.textContent='Copiá la dirección del navegador'}}));
+  all('[data-copy-link]').forEach(btn=>btn.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);btn.textContent=pt?'Link copiado!':'¡Enlace copiado!'}catch{btn.textContent=pt?'Copie o endereço do navegador':'Copiá la dirección del navegador'}}));
   all('[data-whatsapp]').forEach(btn=>btn.addEventListener('click',()=>{const msg=encodeURIComponent((btn.dataset.whatsapp||document.title)+' '+location.href);open('https://wa.me/?text='+msg,'_blank','noopener,noreferrer')}));
   // Gallery lightbox
   const dialog=by('#lightbox');
@@ -31,7 +32,7 @@
     const image=dialog?.querySelector('img');if(!image)return;
     const path=btn.dataset.lightbox;
     // Gallery page always sits one folder below the root.
-    image.src='../'+path;image.alt=btn.dataset.caption||'Fotografía ampliada';
+    image.src=path.startsWith('/')?path:'/'+path;image.alt=btn.dataset.caption||'Fotografía ampliada';
     dialog.querySelector('p').textContent=btn.dataset.caption||'';
     if(dialog.showModal) dialog.showModal();else dialog.setAttribute('open','');
   }));
@@ -47,7 +48,7 @@
     if(payload.get('_gotcha'))return;
     button.disabled=true;
     button.textContent='Enviando…';
-    status.textContent='Enviando tu mensaje…';
+    status.textContent=pt?'Enviando sua mensagem…':'Enviando tu mensaje…';
     try{
       const res=await fetch(form.action,{
         method:'POST',
@@ -60,13 +61,13 @@
         const firstError=Array.isArray(result.errors)?result.errors[0]?.message:null;
         throw Error(firstError||result.error||'No se pudo enviar el mensaje. Intentá nuevamente.');
       }
-      status.textContent='¡Mensaje enviado! Gracias por escribirnos.';
+      status.textContent=pt?'Mensagem enviada! Obrigado por escrever.':'¡Mensaje enviado! Gracias por escribirnos.';
       form.reset();
     }catch(err){
       status.textContent='No pudimos enviar tu mensaje: '+(err?.message||'error de conexión.')+' También podés escribirnos a clubfronterarivera@gmail.com.';
     }finally{
       button.disabled=false;
-      button.textContent='Enviar mensaje ↗';
+      button.textContent=pt?'Enviar mensagem ↗':'Enviar mensaje ↗';
     }
   }));
 
