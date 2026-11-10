@@ -57,14 +57,14 @@
       });
       const result=await res.json().catch(()=>({}));
       if(!res.ok){
-        if(res.status===429)throw Error('Recibimos muchos mensajes en poco tiempo. Esperá unos minutos y volvé a intentar.');
+        if(res.status===429)throw Error(pt?'Muitas mensagens em pouco tempo. Aguarde alguns minutos e tente novamente.':'Recibimos muchos mensajes en poco tiempo. Esperá unos minutos y volvé a intentar.');
         const firstError=Array.isArray(result.errors)?result.errors[0]?.message:null;
-        throw Error(firstError||result.error||'No se pudo enviar el mensaje. Intentá nuevamente.');
+        throw Error(firstError||result.error||(pt?'Não foi possível enviar a mensagem. Tente novamente.':'No se pudo enviar el mensaje. Intentá nuevamente.'));
       }
       status.textContent=pt?'Mensagem enviada! Obrigado por escrever.':'¡Mensaje enviado! Gracias por escribirnos.';
       form.reset();
     }catch(err){
-      status.textContent='No pudimos enviar tu mensaje: '+(err?.message||'error de conexión.')+' También podés escribirnos a clubfronterarivera@gmail.com.';
+      status.textContent=(pt?'Não conseguimos enviar sua mensagem: ':'No pudimos enviar tu mensaje: ')+(err?.message||(pt?'erro de conexão.':'error de conexión.'))+(pt?' Você também pode escrever para clubfronterarivera@gmail.com.':' También podés escribirnos a clubfronterarivera@gmail.com.');
     }finally{
       button.disabled=false;
       button.textContent=pt?'Enviar mensagem ↗':'Enviar mensaje ↗';
