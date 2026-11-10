@@ -1,0 +1,23 @@
+---
+layout: comunicados-base
+---
+<div class="bulletin-wrap wrap">
+<a class="bulletin-back" href="/articulos/comunicados/">← Todos los comunicados</a>
+<article class="bulletin-paper" data-bulletin>
+<header class="bulletin-letterhead"><img data-bulletin-logo src="{{ site.data.sitio.logo | relative_url }}" alt="Escudo de Frontera Rivera" width="76" height="84"><div><strong>FRONTERA RIVERA</strong><span>FÚTBOL CLUB</span></div><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% include fecha-comunicado.html fecha=page.date %}</time></header>
+<p class="bulletin-kicker">COMUNICADO OFICIAL</p>
+<h1 data-bulletin-title>{{ page.title | escape }}</h1>
+<div class="bulletin-body" data-bulletin-body>{{ content }}</div>
+<p class="bulletin-signature" data-bulletin-signature>{{ page.author | default: 'Comisión Directiva' | escape }}</p>
+<footer class="bulletin-footer">Frontera Rivera Fútbol Club · Rivera, Uruguay</footer>
+</article>
+<section class="bulletin-sharing" aria-labelledby="share-title">
+<h2 id="share-title">Compartí el comunicado</h2>
+<div class="bulletin-actions"><button type="button" data-whatsapp="{{ page.title | escape }} — Frontera Rivera">Compartir por WhatsApp ↗</button><button type="button" data-bulletin-copy>Copiar enlace</button><button type="button" data-story-open aria-controls="story-panel" aria-expanded="false">Preparar historia de Instagram</button></div>
+<p role="status" aria-live="polite" data-bulletin-status></p>
+<div id="story-panel" class="story-panel" hidden>
+<div><h3>Una historia para compartir</h3><p>Descargá la imagen y subila a tu historia. Copiá el enlace de este comunicado y pegalo en el sticker «Enlace» de Instagram con el texto «Seguir leyendo».</p><p>Si el comunicado es largo, la imagen muestra un extracto. El texto completo siempre queda en esta página.</p>
+<div class="bulletin-actions"><button type="button" data-story-download disabled>Descargar imagen</button><button type="button" data-story-share hidden>Compartir imagen…</button><button type="button" data-bulletin-copy>Copiar enlace para la historia</button><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Abrir Instagram ↗</a></div>
+<label class="bulletin-url-label">Enlace del comunicado<input readonly data-bulletin-url value="{{ page.url | absolute_url }}" aria-label="Enlace del comunicado para copiar"></label></div>
+<img class="story-preview" data-story-preview alt="Vista previa de la historia del comunicado" hidden width="1080" height="1920">
+</div></section></div><script src="/assets/comunicados.js?v=1" defer></script>

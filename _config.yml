@@ -11,3 +11,15 @@ defaults:
       type: posts
     values:
       layout: noticia
+
+  - scope:
+      path: ""
+      type: comunicados
+    values:
+      layout: comunicado
+      lang: es-UY
+      published: false
+collections:
+  comunicados:
+    output: true
+    permalink: /articulos/comunicados/:name/
