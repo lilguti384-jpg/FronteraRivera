@@ -1,0 +1,38 @@
+/* Both documents opt in only inside the editorial archive. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  ::view-transition-group(*) { animation-duration: 180ms; }
+  ::view-transition-old(*), ::view-transition-new(*) { animation-duration: 180ms; }
+
+  .article-listing img[src$="/santo-rivera.webp"],
+  .article-paper img[src$="/santo-rivera.webp"] { view-transition-name: foto-santo; }
+  .article-listing img[src$="/ascenso-diario.webp"],
+  .article-paper img[src$="/ascenso-diario.webp"] { view-transition-name: foto-ascenso; }
+
+  .match-ticket[open] .match-ticket-paper { animation: unfold-ticket 220ms ease-out; }
+  @keyframes unfold-ticket {
+    from { opacity: 0; transform: translateY(-6px); }
+  }
+}
+
+.match-ticket { margin: .5rem 0 0 auto; width: fit-content; max-width: 100%; }
+.match-ticket summary, .match-ticket-paper {
+  color: #57100d;
+  background: #f6e8c8;
+  border: 1px solid #96684b;
+}
+.match-ticket summary {
+  cursor: pointer;
+  padding: .65rem 1rem;
+  border-left: .45rem solid #a11b1c;
+  border-bottom-style: dashed;
+  font: 700 .84rem/1.5 var(--font-body);
+}
+.match-ticket summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.match-ticket summary strong { display: block; font: 700 1.2rem var(--font-head); }
+.match-ticket-paper { padding: 1.25rem; max-width: 21rem; box-shadow: 3px 4px 0 #77533340; }
+.match-ticket-paper small { display: block; text-transform: uppercase; letter-spacing: .12em; }
+.match-ticket-paper strong { display: block; font: bold 1.5rem/1.2 var(--font-head); margin: .8rem 0; }
+.match-ticket-paper p { color: inherit; }
+.match-ticket-paper blockquote { margin: .8rem 0; padding-top: .8rem; border-top: 1px dashed #96684b; }
+.match-ticket-paper a { color: #85090d; text-decoration: underline; font-weight: 700; }

@@ -1,0 +1,15 @@
+{% assign portugues = false %}
+{% if page.lang == 'pt-BR' %}{% assign portugues = true %}{% endif %}
+<details class="match-ticket">
+  <summary>
+    <span>Parque Viera · <time datetime="1998-11-08">08.11.98</time></span>
+    <strong>{% if portugues %}Ingresso de 98{% else %}Entrada del 98{% endif %}</strong>
+  </summary>
+  <div class="match-ticket-paper">
+    <small>{% if portugues %}Ingresso comemorativo{% else %}Entrada conmemorativa{% endif %}</small>
+    <strong>Frontera Rivera<br><i>vs.</i> Deportivo Maldonado</strong>
+    <p>Parque Viera · Montevideo<br>{% if portugues %}8 de novembro de 1998{% else %}8 de noviembre de 1998{% endif %}</p>
+    <blockquote>«{% if portugues %}Eu estava naquela arquibancada{% else %}Yo estuve en esa tribuna{% endif %}»</blockquote>
+    <a href="../../contacto/">{% if portugues %}Conte sua lembrança{% else %}Contá tu recuerdo{% endif %} ↗</a>
+  </div>
+</details>

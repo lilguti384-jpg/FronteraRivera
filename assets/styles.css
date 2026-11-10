@@ -320,3 +320,23 @@ body.dark .kit2027-zoom{background:#fff8ea;color:#261711}
   .header-inner .brand img{width:40px;height:50px}
   .header-inner .brand span{font-size:.78rem}
 }
+
+/* Size the Portuguese headline against its actual grid column. */
+html:lang(pt) .hero-copy { container-type: inline-size; min-width: 0; }
+html:lang(pt) .hero-copy h1 { font-size: clamp(2rem, 14cqi, 5.2rem); }
+.hero-photo figcaption { display: flex; align-items: center; justify-content: space-between; gap: .7rem; }
+.cover-ink {
+  flex: none; display: inline-grid; place-items: center; padding: .3rem .48rem;
+  border: 3px double #891d20; border-radius: 3px; color: #891d20;
+  font: 800 .78rem/1 var(--font-head); text-transform: uppercase;
+  letter-spacing: .04em; transform: rotate(-5deg); text-align: center;
+}
+.cover-ink span { margin-top: .2rem; font: 800 .53rem/1.15 var(--font-body); letter-spacing: .12em; }
+@media (prefers-reduced-motion: no-preference) {
+  .cover-ink { animation: ink-impression 330ms ease-out both; }
+  @keyframes ink-impression {
+    from { opacity: 0; transform: rotate(-9deg) scale(1.16); }
+    62% { opacity: 1; transform: rotate(-5deg) scale(.97); }
+    to { transform: rotate(-5deg) scale(1); }
+  }
+}
