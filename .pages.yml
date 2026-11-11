@@ -39,6 +39,30 @@ content:
       - name: description
         label: Resumen para el listado y las redes
         type: text
+      - name: title_font
+        label: Tipografía del título
+        type: select
+        options:
+          values: [FuturaHv, Albertus]
+        default: FuturaHv
+      - name: title_size
+        label: Tamaño del título (px)
+        type: number
+        default: 34
+      - name: body_size
+        label: Tamaño del texto (px)
+        type: number
+        default: 20
+      - name: corner_radius
+        label: Bordes redondeados (px)
+        type: number
+        default: 12
+      - name: image
+        label: Imagen para compartir en redes
+        type: image
+      - name: logo
+        label: Escudo del comunicado
+        type: image
       - name: author
         label: Firma
         type: string
@@ -84,6 +108,30 @@ content:
       - name: description
         label: Resumen para el listado y las redes
         type: text
+      - name: title_font
+        label: Tipografía del título
+        type: select
+        options:
+          values: [FuturaHv, Albertus]
+        default: FuturaHv
+      - name: title_size
+        label: Tamaño del título (px)
+        type: number
+        default: 34
+      - name: body_size
+        label: Tamaño del texto (px)
+        type: number
+        default: 20
+      - name: corner_radius
+        label: Bordes redondeados (px)
+        type: number
+        default: 12
+      - name: image
+        label: Imagen para compartir en redes
+        type: image
+      - name: logo
+        label: Escudo del comunicado
+        type: image
       - name: author
         label: Firma
         type: string
@@ -242,6 +290,30 @@ content:
       - name: description
         label: Bajada o resumen
         type: text
+      - name: title_font
+        label: Tipografía del título
+        type: select
+        options:
+          values: [FuturaHv, Albertus]
+        default: FuturaHv
+      - name: title_size
+        label: Tamaño del título (px)
+        type: number
+        default: 34
+      - name: body_size
+        label: Tamaño del texto (px)
+        type: number
+        default: 20
+      - name: corner_radius
+        label: Bordes redondeados (px)
+        type: number
+        default: 12
+      - name: image
+        label: Imagen para compartir en redes
+        type: image
+      - name: logo
+        label: Escudo del comunicado
+        type: image
       - name: author
         label: Autor
         type: string

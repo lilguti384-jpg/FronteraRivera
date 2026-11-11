@@ -15,7 +15,7 @@
   all('#mobileNav a').forEach(a=>a.addEventListener('click',closeMenu));
   const darkBtns=all('[data-dark-toggle]');
   let isDark=false;try{isDark=localStorage.getItem('frontera-dark')==='true'}catch{}
-  function renderDark(){document.body.classList.toggle('dark',isDark);darkBtns.forEach(btn=>{btn.setAttribute('aria-pressed',String(isDark));btn.setAttribute('aria-label',isDark?(pt?'Ativar modo claro':'Activar modo claro'):(pt?'Ativar modo escuro':'Activar modo oscuro'));const label=btn.querySelector('.dark-label');if(label)label.textContent=isDark?(pt?'Modo claro':'Modo claro'):(pt?'Modo escuro':'Modo oscuro');else if(btn.classList.contains('mobile-dark'))btn.textContent=isDark?(pt?'☀ Modo claro':'☀ Modo claro'):(pt?'◐ Modo escuro':'◐ Modo oscuro')})}
+  function renderDark(){document.body.classList.toggle('dark',isDark);darkBtns.forEach(btn=>{btn.setAttribute('aria-pressed',String(isDark));btn.setAttribute('aria-label',isDark?(pt?'Ativar modo claro':'Activar modo claro'):(pt?'Ativar modo escuro':'Activar modo oscuro'));const label=btn.querySelector('.dark-label');if(label)label.textContent=isDark?'Claro':(pt?'Escuro':'Oscuro');else if(btn.classList.contains('mobile-dark'))btn.textContent=isDark?(pt?'☀ Modo claro':'☀ Modo claro'):(pt?'◐ Modo escuro':'◐ Modo oscuro')})}
   renderDark();darkBtns.forEach(btn=>btn.addEventListener('click',()=>{isDark=!isDark;try{localStorage.setItem('frontera-dark',String(isDark))}catch{}renderDark()}));
   // Reveal only when JS is available; otherwise content remains visible.
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window){
