@@ -1,0 +1,11 @@
+{
+  "font_head": "albertus",
+  "font_body": "Satoshi",
+  "color_cream": "#f0eade",
+  "color_paper": "#fffaf1",
+  "color_ink": "#261711",
+  "color_red": "#c41013",
+  "color_yellow": "#fec10e",
+  "radius_cards": 8,
+  "body_size": 16
+}
