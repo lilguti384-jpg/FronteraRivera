@@ -7,5 +7,12 @@
   "color_red": "#c41013",
   "color_yellow": "#fec10e",
   "radius_cards": 8,
-  "body_size": 16
+  "body_size": 16,
+  "heading_scale": 1,
+  "radius_images": 8,
+  "border_width": 1,
+  "border_style": "solid",
+  "section_spacing": 64,
+  "color_border": "#d5c5ac",
+  "card_shadow": "suave"
 }
