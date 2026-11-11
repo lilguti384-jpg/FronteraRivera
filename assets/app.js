@@ -26,6 +26,14 @@
   // Copy and WhatsApp share
   all('[data-copy-link]').forEach(btn=>btn.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);btn.textContent=pt?'Link copiado!':'¡Enlace copiado!'}catch{btn.textContent=pt?'Copie o endereço do navegador':'Copiá la dirección del navegador'}}));
   all('[data-whatsapp]').forEach(btn=>btn.addEventListener('click',()=>{const msg=encodeURIComponent((btn.dataset.whatsapp||document.title)+' '+location.href);open('https://wa.me/?text='+msg,'_blank','noopener,noreferrer')}));
+  // Facebook post share: the proposed caption invites readers back to the full communiqué.
+  all('[data-facebook-share]').forEach(btn=>btn.addEventListener('click',()=>{
+    const target=new URL('https://www.facebook.com/sharer/sharer.php');
+    target.searchParams.set('u',location.href);
+    const title=btn.dataset.facebookTitle||document.title;
+    target.searchParams.set('quote',pt?`${title} · Continue lendo no site do Frontera Rivera: ${location.href}`:`${title} · Seguí leyendo en la página web de Frontera Rivera: ${location.href}`);
+    open(target.toString(),'_blank','noopener,noreferrer,width=680,height=720');
+  }));
   // Gallery lightbox
   const dialog=by('#lightbox');
   all('[data-lightbox]').forEach(btn=>btn.addEventListener('click',()=>{

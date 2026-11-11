@@ -19,7 +19,17 @@ defaults:
       layout: comunicado
       lang: es-UY
       published: false
+  - scope:
+      path: ""
+      type: comunicados_pt
+    values:
+      layout: comunicado-pt
+      lang: pt-BR
+      published: false
 collections:
   comunicados:
     output: true
     permalink: /articulos/comunicados/:name/
+  comunicados_pt:
+    output: true
+    permalink: /pt/articulos/comunicados/:name/

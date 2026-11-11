@@ -42,4 +42,7 @@
 {% for comunicado in site.comunicados %}{% if comunicado.published %}
   <url><loc>{{ comunicado.url | absolute_url | xml_escape }}</loc><lastmod>{{ comunicado.date | date: '%Y-%m-%d' }}</lastmod></url>
 {% endif %}{% endfor %}
+{% for comunicado in site.comunicados_pt %}{% if comunicado.published %}
+  <url><loc>{{ comunicado.url | absolute_url | xml_escape }}</loc><lastmod>{{ comunicado.date | date: '%Y-%m-%d' }}</lastmod></url>
+{% endif %}{% endfor %}
 </urlset>

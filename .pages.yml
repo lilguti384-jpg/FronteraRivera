@@ -55,6 +55,51 @@ content:
         default: false
         description: Activá esta opción cuando el texto y la fecha estén confirmados.
 
+  - name: comunicados_pt
+    label: Comunicados en portugués
+    type: collection
+    path: _comunicados_pt
+    format: yaml-frontmatter
+    filename: "{fields.original}.md"
+    exclude: [.gitkeep]
+    view:
+      fields: [title, date, published]
+      primary: title
+    fields:
+      - name: original
+        label: Nombre del archivo original en español (sin .md)
+        type: string
+        required: true
+        description: Copiá el nombre exacto para vincular las banderas. Ejemplo 2026-11-10-citacion-a-asamblea-general-extraordinaria
+      - name: title
+        label: Título del comunicado
+        type: string
+        required: true
+      - name: date
+        label: Fecha del comunicado
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: description
+        label: Resumen para el listado y las redes
+        type: text
+      - name: author
+        label: Firma
+        type: string
+        default: Comissão Diretiva
+      - name: body
+        label: Texto del comunicado
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+      - name: published
+        label: Publicar en la web
+        type: boolean
+        default: false
+        description: Activá esta opción cuando el texto y la fecha estén confirmados.
+
   - name: inicio
     label: Portada del inicio
     type: file
