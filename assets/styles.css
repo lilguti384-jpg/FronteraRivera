@@ -348,3 +348,8 @@ html:lang(pt) .hero-copy h1 { font-size: clamp(2rem, 14cqi, 5.2rem); }
 .article-listing[href*="comunicados"] .article-listing-photo img{position:static!important;display:block;margin:auto!important;width:68px!important;height:80px!important;transform:none!important;object-fit:contain!important}
 @font-face{font-family:FlagEmoji;src:url('https://cdn.jsdelivr.net/npm/country-flag-emoji-polyfill@0.1.8/dist/TwemojiCountryFlags.woff2') format('woff2');font-display:swap}
 .language-toggle span{font-family:FlagEmoji,'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif!important}
+
+.language-picker>span,.dark-toggle:before{font-family:var(--font-body)!important;font-size:.65rem!important;font-weight:800!important;line-height:1!important;letter-spacing:.04em!important}
+.article-listing[href*="comunicados"] h2,.bulletin-intro h1{text-transform:uppercase}
+.bulletin-sharing .icon-button{min-width:44px;min-height:44px}.bulletin-sharing :focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
