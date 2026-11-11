@@ -14,5 +14,12 @@
   "border_style": "solid",
   "section_spacing": 64,
   "color_border": "#d5c5ac",
-  "card_shadow": "suave"
+  "card_shadow": "suave",
+  "hero_title_scale": 1,
+  "section_title_scale": 1,
+  "card_title_scale": 1,
+  "text_scale": 1,
+  "button_radius": 8,
+  "card_padding": 24,
+  "image_fit": "cover"
 }
