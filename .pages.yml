@@ -148,6 +148,77 @@ content:
         default: false
         description: Activá esta opción cuando el texto y la fecha estén confirmados.
 
+  - name: personalizacion_visual
+    label: Diseño y tipografía de toda la web
+    type: file
+    path: _data/tema.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: font_head
+        label: Tipografía de títulos
+        type: select
+        options:
+          values: [albertus, Cinzel, Georgia]
+      - name: font_body
+        label: Tipografía de textos
+        type: select
+        options:
+          values: [Satoshi, Arial, Georgia]
+      - name: body_size
+        label: Tamaño base del texto (px)
+        type: number
+        default: 16
+      - name: heading_scale
+        label: Escala general de títulos (0.85 a 1.2)
+        type: number
+        default: 1
+      - name: radius_cards
+        label: Redondeo de tarjetas (px)
+        type: number
+        default: 8
+      - name: radius_images
+        label: Redondeo de fotografías (px)
+        type: number
+        default: 8
+      - name: border_width
+        label: Grosor de bordes (px)
+        type: number
+        default: 1
+      - name: border_style
+        label: Estilo de bordes
+        type: select
+        options:
+          values: [solid, dashed, dotted]
+      - name: section_spacing
+        label: Separación entre secciones (px)
+        type: number
+        default: 64
+      - name: color_cream
+        label: Fondo general (color hexadecimal)
+        type: string
+      - name: color_paper
+        label: Fondo de tarjetas (color hexadecimal)
+        type: string
+      - name: color_ink
+        label: Color principal de texto (color hexadecimal)
+        type: string
+      - name: color_red
+        label: Rojo institucional (color hexadecimal)
+        type: string
+      - name: color_yellow
+        label: Amarillo institucional (color hexadecimal)
+        type: string
+      - name: color_border
+        label: Color de bordes (color hexadecimal)
+        type: string
+      - name: card_shadow
+        label: Sombra de tarjetas
+        type: select
+        options:
+          values: [suave, media, ninguna]
+
   - name: inicio
     label: Portada del inicio
     type: file
