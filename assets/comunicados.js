@@ -6,7 +6,7 @@
  const title=$('[data-bulletin-title]').textContent.trim();
  const pt=document.documentElement.lang.toLowerCase().startsWith('pt');
  const download=$('[data-story-download]');
- let file,objectURL,building,format="story";
+ let file,objectURL,building;
  async function copy(){try{await navigator.clipboard.writeText(url);status.textContent=pt?'Link copiado. No Instagram, cole-o no adesivo «Link».':'Enlace copiado. En Instagram, pegalo en el sticker «Enlace».'}catch{window.prompt(pt?'Copie o link:':'Copiá el enlace:',url)}}
  document.querySelectorAll('[data-bulletin-copy]').forEach(b=>b.addEventListener('click',copy));
  function wrap(ctx,text,width){const lines=[];for(const para of text.split(/\n+/)){let line='';for(const word of para.trim().split(/\s+/)){if(!word)continue;const candidate=line?line+' '+word:word;if(ctx.measureText(candidate).width<=width){line=candidate;continue}if(line)lines.push(line);line='';for(const char of word){if(ctx.measureText(line+char).width>width){lines.push(line);line=''}line+=char}}if(line)lines.push(line);lines.push('')}return lines.length?lines.slice(0,-1):[]}
@@ -25,7 +25,7 @@
   ctx.fillStyle='#b70f12';ctx.font='bold 25px Arial';const signature=wrap(ctx,$('[data-bulletin-signature]').textContent.trim(),900).slice(0,2);drawLines(ctx,signature,90,1035,32);
   ctx.fillStyle='#c41013';ctx.beginPath();ctx.roundRect(90,1140,900,78,24);ctx.fill();ctx.fillStyle='#fff';ctx.font='bold 29px Arial';ctx.textAlign='center';ctx.fillText(pt?'Comunicado completo em fronterarivera.uy':'Comunicado completo en fronterarivera.uy',540,1189);ctx.fillStyle='#555';ctx.font='22px Arial';ctx.fillText('',540,1270);
   ctx.fillStyle='#c41013';ctx.fillRect(0,1332,540,18);ctx.fillStyle='#fec10e';ctx.fillRect(540,1332,540,18);
-  let output=canvas;if(format==='story'){output=document.createElement('canvas');output.width=1080;output.height=1920;const sc=output.getContext('2d');sc.fillStyle='#c41013';sc.fillRect(0,0,1080,1920);const background=new Image();background.src='/assets/img/fondo.jpeg';await background.decode();const zoom=Math.max(1080/background.naturalWidth,1920/background.naturalHeight);const bw=background.naturalWidth*zoom,bh=background.naturalHeight*zoom;sc.drawImage(background,(1080-bw)/2,(1920-bh)/2,bw,bh);sc.save();sc.beginPath();sc.roundRect(54,352,972,1215,32);sc.clip();sc.drawImage(canvas,54,352,972,1215);sc.restore()}const blob=await new Promise(resolve=>output.toBlob(resolve,'image/png'));if(!blob)throw Error('No se pudo generar la imagen');file=new File([blob],'frontera-comunicado-'+paper.querySelector('time').dateTime+'.png',{type:'image/png'});if(objectURL)URL.revokeObjectURL(objectURL);objectURL=URL.createObjectURL(blob);
+  const output=canvas;const blob=await new Promise(resolve=>output.toBlob(resolve,'image/png'));if(!blob)throw Error('No se pudo generar la imagen');file=new File([blob],'frontera-comunicado-1080x1350-'+paper.querySelector('time').dateTime+'.png',{type:'image/png'});if(objectURL)URL.revokeObjectURL(objectURL);objectURL=URL.createObjectURL(blob);
  }
 
  const instagram=$('[data-instagram-share]');
