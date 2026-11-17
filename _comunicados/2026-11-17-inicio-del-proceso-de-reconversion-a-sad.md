@@ -2,7 +2,7 @@
 title: Frontera Rivera Fútbol Club inicia el proceso de reconversión a SAD
 date: 2026-11-17
 description: La Asamblea Extraordinaria del 16 de noviembre aprobó por unanimidad iniciar el proceso jurídico de reconversión del club de asociación civil a sociedad anónima deportiva (SAD). También facultó a la Comisión Directiva y a la Comisión Fiscal a reestructurar la Directiva.
-author: La Directiva
+author: Comisión Directiva
 published: true
 ---
 Tal como estaba previsto, el 16 de noviembre de 2026 se llevó a cabo la Asamblea Extraordinaria de Frontera Rivera Fútbol Club.
